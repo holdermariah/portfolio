@@ -1,11 +1,16 @@
 import type { Project } from './types';
 
+const getImagePath = (path: string) => {
+	const base = import.meta.env.BASE_URL;
+	return `${base}${path}`.replace(/\/+/g, '/');
+};
+
 export const PROJECTS: Project[] = [
 	{
 		id: 'arpo-cafe',
 		title: 'Arpo Cafe - Logo Design',
 		year: 2024,
-		thumbnail: '/images/arpo/cover_Arpo Cafe - FINAL.png',
+		thumbnail: getImagePath('images/arpo/cover_Arpo Cafe - FINAL.png'),
 		category: 'Branding',
 		description: 'Complete visual identity for a modern cafe',
 		sections: [
@@ -13,7 +18,7 @@ export const PROJECTS: Project[] = [
 				id: 'cover',
 				title: '',
 				content: '',
-				image: '/images/arpo/cover_Arpo Cafe - FINAL.png',
+				image: getImagePath('images/arpo/cover_Arpo Cafe - FINAL.png'),
 			},
 			{
 				id: 'text',
@@ -25,13 +30,13 @@ export const PROJECTS: Project[] = [
 				id: 'elements',
 				title: '',
 				content: '',
-				image: '/images/arpo/Arpo Cafe - elements.png',
+				image: getImagePath('images/arpo/Arpo Cafe - elements.png'),
 			},
 			{
 				id: 'mockups',
 				title: '',
 				content: '',
-				image: '/images/arpo/Coffee cup.png',
+				image: getImagePath('images/arpo/Coffee cup.png'),
 			},
 		],
 		tools: ['Figma', 'Illustrator', 'Photoshop'],
@@ -40,7 +45,7 @@ export const PROJECTS: Project[] = [
 		id: 'elali',
 		title: 'Elali',
 		year: 2024,
-		thumbnail: '/images/elali/cover _ Elali Logo.png',
+		thumbnail: getImagePath('images/elali/cover _ Elali Logo.png'),
 		category: 'Branding',
 		description: 'Logo design and brand identity',
 		sections: [
@@ -48,7 +53,7 @@ export const PROJECTS: Project[] = [
 				id: 'cover',
 				title: '',
 				content: '',
-				image: '/images/elali/cover _ Elali Logo.png',
+				image: getImagePath('images/elali/cover _ Elali Logo.png'),
 			},
 			{
 				id: 'text',
@@ -60,13 +65,13 @@ export const PROJECTS: Project[] = [
 				id: 'logo',
 				title: '',
 				content: '',
-				image: '/images/elali/ELALI.png',
+				image: getImagePath('images/elali/ELALI.png'),
 			},
 			{
 				id: 'variations',
 				title: '',
 				content: '',
-				image: '/images/elali/ELALI_2.png',
+				image: getImagePath('images/elali/ELALI_2.png'),
 			},
 		],
 		tools: ['Illustrator', 'Photoshop'],
@@ -75,7 +80,7 @@ export const PROJECTS: Project[] = [
 		id: 'multivista',
 		title: 'Multivista Social Media',
 		year: 2024,
-		thumbnail: '/images/multivista/cover _Multivista Social Media.png',
+		thumbnail: getImagePath('images/multivista/cover _Multivista Social Media.png'),
 		category: 'Social Media',
 		description: 'Social media content design',
 		sections: [
@@ -83,7 +88,7 @@ export const PROJECTS: Project[] = [
 				id: 'cover',
 				title: '',
 				content: '',
-				image: '/images/multivista/cover _Multivista Social Media.png',
+				image: getImagePath('images/multivista/cover _Multivista Social Media.png'),
 			},
 			{
 				id: 'text',
@@ -95,13 +100,13 @@ export const PROJECTS: Project[] = [
 				id: 'content',
 				title: '',
 				content: '',
-				image: '/images/multivista/IMG_7347.jpg',
+				image: getImagePath('images/multivista/IMG_7347.jpg'),
 			},
 			{
 				id: 'series',
 				title: '',
 				content: '',
-				image: '/images/multivista/IMG_7348.jpg',
+				image: getImagePath('images/multivista/IMG_7348.jpg'),
 			},
 		],
 		tools: ['Photoshop', 'Illustrator'],
@@ -110,7 +115,7 @@ export const PROJECTS: Project[] = [
 		id: 'dotrigo',
 		title: 'Dotrigo - Package design',
 		year: 2023,
-		thumbnail: '/images/dotrigo/cover _ Coxinha.jpg',
+		thumbnail: getImagePath('images/dotrigo/cover _ Coxinha.jpg'),
 		category: 'Package Design',
 		description: 'Food photography and styling for Brazilian snacks',
 		sections: [
@@ -118,7 +123,7 @@ export const PROJECTS: Project[] = [
 				id: 'cover',
 				title: '',
 				content: '',
-				image: '/images/dotrigo/cover _ Coxinha.jpg',
+				image: getImagePath('images/dotrigo/cover _ Coxinha.jpg'),
 			},
 			{
 				id: 'text',
@@ -130,13 +135,13 @@ export const PROJECTS: Project[] = [
 				id: 'coxinha',
 				title: '',
 				content: '',
-				image: '/images/dotrigo/cover _ Coxinha.jpg',
+				image: getImagePath('images/dotrigo/cover _ Coxinha.jpg'),
 			},
 			{
 				id: 'variety',
 				title: '',
 				content: '',
-				image: '/images/dotrigo/Churros.jpg',
+				image: getImagePath('images/dotrigo/Churros.jpg'),
 			},
 		],
 		tools: ['Photography', 'Photoshop'],
@@ -145,7 +150,7 @@ export const PROJECTS: Project[] = [
 		id: 'gdp-delivery',
 		title: 'Gosto de pao Delivery - Package design',
 		year: 2023,
-		thumbnail: '/images/gdp/GDP delivery logo.png',
+		thumbnail: getImagePath('images/gdp/GDP delivery logo.png'),
 		category: 'Package Design',
 		description: 'Brand identity for delivery service',
 		sections: [
@@ -153,7 +158,7 @@ export const PROJECTS: Project[] = [
 				id: 'cover',
 				title: '',
 				content: '',
-				image: '/images/gdp/GDP delivery logo.png',
+				image: getImagePath('images/gdp/GDP delivery logo.png'),
 			},
 			{
 				id: 'text',
@@ -165,13 +170,13 @@ export const PROJECTS: Project[] = [
 				id: 'identity',
 				title: '',
 				content: '',
-				image: '/images/gdp/GDP delivery .png',
+				image: getImagePath('images/gdp/GDP delivery .png'),
 			},
 			{
 				id: 'applications',
 				title: '',
 				content: '',
-				image: '/images/gdp/GDP delivery sacola.png',
+				image: getImagePath('images/gdp/GDP delivery sacola.png'),
 			},
 		],
 		tools: ['Illustrator', 'Photoshop'],
@@ -180,7 +185,7 @@ export const PROJECTS: Project[] = [
 		id: 'animal-collages',
 		title: 'Animal Collages',
 		year: 2023,
-		thumbnail: '/images/collages/covner_Animal collage - all.png',
+		thumbnail: getImagePath('images/collages/covner_Animal collage - all.png'),
 		category: 'Illustration',
 		description: 'Creative animal portrait collages',
 		sections: [
@@ -188,19 +193,19 @@ export const PROJECTS: Project[] = [
 				id: 'cover',
 				title: '',
 				content: '',
-				image: '/images/collages/covner_Animal collage - all.png',
+				image: getImagePath('images/collages/covner_Animal collage - all.png'),
 			},
 			{
 				id: 'collection',
 				title: '',
 				content: '',
-				image: '/images/collages/Animal collage - panda.png',
+				image: getImagePath('images/collages/Animal collage - panda.png'),
 			},
 			{
 				id: 'variety',
 				title: '',
 				content: '',
-				image: '/images/collages/Animal collage - esquilo.png',
+				image: getImagePath('images/collages/Animal collage - esquilo.png'),
 			},
 		],
 		tools: ['Photoshop', 'Illustrator'],

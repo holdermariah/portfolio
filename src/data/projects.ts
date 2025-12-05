@@ -192,7 +192,7 @@ export const PROJECTS: Project[] = [
 		thumbnail: getImagePath(
 			'images/collages/covner_Animal collage - all.png',
 		),
-		category: 'Illustration',
+		category: 'Collage',
 		description: 'Creative animal portrait collages',
 		sections: [
 			{

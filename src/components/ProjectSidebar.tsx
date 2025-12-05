@@ -28,10 +28,10 @@ export default function ProjectSidebar({ project }: ProjectSidebarProps) {
 			<div className="flex justify-center">
 				<img
 					src={getImagePath(
-						'images/Personal Branding/Mariah Holder - Personal Branding - Reverse.png',
+						'images/Personal Branding/Mariah Holder - Personal Branding.png',
 					)}
 					alt="Mariah Holder Personal Branding"
-					className="h-32 cursor-pointer"
+					className="h-48 cursor-pointer"
 					onClick={() => navigate('/')}
 				/>
 			</div>

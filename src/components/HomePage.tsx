@@ -13,15 +13,14 @@ export default function HomePage() {
 	return (
 		<div className="min-h-screen">
 			{/* Landing Section */}
-			<section className="h-screen flex flex-col items-center justify-center px-4">
-				<div className="text-center space-y-8">
+			<section className="h-screen flex flex-col items-center justify-center px-4 relative">
+				<div className="text-center space-y-8 relative z-10">
 					<div className="space-y-4">
-						<h1 className="text-6xl md:text-8xl font-bold tracking-tight">
-							Portfolio
-						</h1>
-						<p className="text-xl md:text-2xl text-muted-foreground">
-							Graphic Design & Visual Identity
-						</p>
+						<img
+							src="/src/assets/Personal Branding/Mariah Holder - Personal Branding - Reverse.png"
+							alt="Mariah Holder Personal Branding"
+							className="h-[50vh]"
+						/>
 					</div>
 					<div className="flex items-center justify-center gap-3">
 						<Button
@@ -31,7 +30,7 @@ export default function HomePage() {
 						>
 							Check out my work
 						</Button>{' '}
-						<AnimatedArrow className="w-12 h-12 mt-8 text-muted-foreground" />
+						<AnimatedArrow className="w-12 h-12 mt-8  text-white" />
 					</div>
 				</div>
 			</section>

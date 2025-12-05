@@ -2,6 +2,7 @@ import { useNavigate } from 'react-router-dom';
 import type { Project } from '@/data/types';
 import { Button } from './ui/button';
 import { PROJECTS } from '@/data/projects';
+import { InstagramIcon, LinkedinIcon, Mail } from 'lucide-react';
 
 interface ProjectSidebarProps {
 	project: Project;
@@ -11,13 +12,13 @@ export default function ProjectSidebar({ project }: ProjectSidebarProps) {
 	const navigate = useNavigate();
 
 	return (
-		<aside className="w-full lg:w-64 lg:sticky lg:top-0 lg:h-screen p-6 lg:p-8 space-y-8 border-b lg:border-b-0 bg-background overflow-y-auto">
+		<aside className="w-full lg:w-72 lg:sticky lg:top-0 lg:h-screen p-6 lg:p-8 space-y-8 border-b lg:border-b-0 bg-white overflow-y-auto">
 			{/* Logo / Back Button */}
 			<div className="space-y-4">
 				<Button
 					variant="ghost"
 					onClick={() => navigate('/')}
-					className="px-0 hover:bg-transparent"
+					className="px-0 hover:bg-transparent text-gray-700 hover:text-black"
 				>
 					←
 				</Button>
@@ -26,7 +27,7 @@ export default function ProjectSidebar({ project }: ProjectSidebarProps) {
 			{/* Main Logo */}
 			<div className="flex justify-center">
 				<img
-					src="/src/assets/Personal Branding/Mariah Holder - Personal Branding - Reverse.png"
+					src="/images/Personal Branding/Mariah Holder - Personal Branding - Reverse.png"
 					alt="Mariah Holder Personal Branding"
 					className="h-32 cursor-pointer"
 					onClick={() => navigate('/')}
@@ -35,15 +36,15 @@ export default function ProjectSidebar({ project }: ProjectSidebarProps) {
 
 			{/* Projects Navigation */}
 			<nav className="space-y-2">
-				<p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-4">
+				<p className="text-xs font-semibold uppercase tracking-wider text-gray-500 mb-4">
 					Work
 				</p>
 				{PROJECTS.map((p) => (
 					<button
 						key={p.id}
 						onClick={() => navigate(`/project/${p.id}`)}
-						className={`block w-full text-left text-sm px-3 rounded-md transition-colors hover:bg-accent/50 ${
-							p.id === project.id ? 'font-bold' : ''
+						className={`block w-full text-left text-sm px-3 rounded-md transition-colors hover:bg-gray-100 text-gray-700 ${
+							p.id === project.id ? 'font-bold text-black' : ''
 						}`}
 					>
 						{p.title}
@@ -52,32 +53,35 @@ export default function ProjectSidebar({ project }: ProjectSidebarProps) {
 			</nav>
 
 			{/* Contact Section */}
-			<div className="space-y-4 pt-4 border-t">
-				<p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+			<div className="space-y-4 pt-4">
+				<p className="text-xs font-semibold uppercase tracking-wider text-gray-500">
 					Get in Touch
 				</p>
-				<div className="space-y-2 text-sm">
+				<div className="flex flex-row gap-4">
 					<a
 						href="mailto:hello@example.com"
-						className="block hover:text-accent-foreground transition-colors"
+						className="text-gray-700 hover:text-black transition-colors"
+						aria-label="Email"
 					>
-						Email
+						<Mail className="w-5 h-5" />
 					</a>
 					<a
 						href="https://linkedin.com"
 						target="_blank"
 						rel="noopener noreferrer"
-						className="block hover:text-accent-foreground transition-colors"
+						className="text-gray-700 hover:text-black transition-colors"
+						aria-label="LinkedIn"
 					>
-						LinkedIn
+						<LinkedinIcon className="w-5 h-5" />
 					</a>
 					<a
 						href="https://instagram.com"
 						target="_blank"
 						rel="noopener noreferrer"
-						className="block hover:text-accent-foreground transition-colors"
+						className="text-gray-700 hover:text-black transition-colors"
+						aria-label="Instagram"
 					>
-						Instagram
+						<InstagramIcon className="w-5 h-5" />
 					</a>
 				</div>
 			</div>

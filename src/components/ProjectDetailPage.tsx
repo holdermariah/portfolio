@@ -17,7 +17,7 @@ export default function ProjectDetailPage() {
   }
 
   return (
-    <div className="min-h-screen flex flex-col lg:flex-row">
+    <div className="min-h-screen flex flex-col lg:flex-row bg-white">
       <ProjectSidebar project={project} />
       <ProjectContent project={project} />
     </div>

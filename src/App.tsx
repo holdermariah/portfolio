@@ -4,8 +4,10 @@ import ProjectDetailPage from './components/ProjectDetailPage'
 import './App.css'
 
 function App() {
+  const basename = import.meta.env.MODE === 'production' ? '/portfolio' : '/'
+
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={basename}>
       <div className="min-h-screen bg-[#798dc6]">
         <Routes>
           <Route path="/" element={<HomePage />} />

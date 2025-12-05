@@ -6,8 +6,8 @@ interface ProjectContentProps {
 
 export default function ProjectContent({ project }: ProjectContentProps) {
 	return (
-		<main className="flex-1 p-6 lg:pl-12 lg:pr-64">
-			<h2 className="text-3xl font-bold w-full text-center pb-6">
+		<main className="flex-1 p-10 lg:pl-24 lg:pr-24">
+			<h2 className="text-3xl font-bold w-full text-center pb-8 text-black">
 				{project.title}
 			</h2>
 
@@ -31,13 +31,13 @@ export default function ProjectContent({ project }: ProjectContentProps) {
 						)}
 
 						{section.content && (
-							<div className="prose prose-neutral dark:prose-invert max-w-none">
+							<div className="prose prose-neutral max-w-none">
 								{section.content
 									.split('\n\n')
 									.map((paragraph, index) => (
 										<p
 											key={index}
-											className="text-base leading-relaxed mb-4"
+											className="text-base leading-relaxed mb-4 text-black"
 										>
 											{paragraph}
 										</p>

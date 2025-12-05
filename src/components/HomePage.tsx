@@ -1,5 +1,6 @@
 import { PROJECTS } from '@/data/projects';
 import ProjectCard from './ProjectCard';
+import AnimatedArrow from './ui/animated-arrow';
 import { Button } from './ui/button';
 
 export default function HomePage() {
@@ -22,9 +23,16 @@ export default function HomePage() {
 							Graphic Design & Visual Identity
 						</p>
 					</div>
-					<Button onClick={scrollToGrid} size="lg" className="mt-8">
-						View Work ↓
-					</Button>
+					<div className="flex items-center justify-center gap-3">
+						<Button
+							onClick={scrollToGrid}
+							size="lg"
+							className="mt-8 bg-transparent"
+						>
+							Check out my work
+						</Button>{' '}
+						<AnimatedArrow className="w-12 h-12 mt-8 text-muted-foreground" />
+					</div>
 				</div>
 			</section>
 

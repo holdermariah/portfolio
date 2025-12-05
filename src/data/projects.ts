@@ -8,7 +8,7 @@ export const getImagePath = (path: string) => {
 export const PROJECTS: Project[] = [
 	{
 		id: 'arpo-cafe',
-		title: 'Arpo Cafe - Logo Design',
+		title: 'Arpô Café - Logo Design',
 		year: 2025,
 		thumbnail: getImagePath('images/arpo/cover_Arpo Cafe - FINAL.png'),
 		category: 'Branding',
@@ -67,7 +67,7 @@ export const PROJECTS: Project[] = [
 	},
 	{
 		id: 'elali',
-		title: 'Elali',
+		title: 'Elali Counselling - Logo Design',
 		year: 2023,
 		thumbnail: getImagePath('images/elali/cover _ Elali Logo.png'),
 		category: 'Branding',
@@ -189,7 +189,7 @@ export const PROJECTS: Project[] = [
 	},
 	{
 		id: 'dotrigo',
-		title: 'Dotrigo - Package design',
+		title: 'Dotrigo - Package Design',
 		year: 2023,
 		thumbnail: getImagePath('images/dotrigo/cover _ Coxinha.jpg'),
 		category: 'Package Design',
@@ -236,7 +236,7 @@ export const PROJECTS: Project[] = [
 	},
 	{
 		id: 'gdp-delivery',
-		title: 'Gosto de pao Delivery - Package design',
+		title: 'Gosto de Pão Delivery - Package Design',
 		year: 2020,
 		thumbnail: getImagePath('images/gdp/GDP delivery logo.png'),
 		category: 'Package Design',

@@ -26,11 +26,11 @@ export default function HomePage() {
 						<Button
 							onClick={scrollToGrid}
 							size="lg"
-							className="mt-8 bg-transparent"
+							variant="ghost"
 						>
 							Check out my work
-						</Button>{' '}
-						<AnimatedArrow className="w-12 h-12 mt-8  text-white" />
+						</Button>
+						<AnimatedArrow className="w-12 h-12 mt-8" />
 					</div>
 				</div>
 			</section>

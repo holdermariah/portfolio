@@ -6,10 +6,12 @@ import './App.css'
 function App() {
   return (
     <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/project/:id" element={<ProjectDetailPage />} />
-      </Routes>
+      <div className="min-h-screen bg-[#798dc6]">
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/project/:id" element={<ProjectDetailPage />} />
+        </Routes>
+      </div>
     </BrowserRouter>
   )
 }

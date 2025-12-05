@@ -196,16 +196,16 @@ export const PROJECTS: Project[] = [
 		description: 'Food photography and styling for Brazilian snacks',
 		sections: [
 			{
-				id: 'text',
-				title: '',
-				content:
-					'Creation of packaging for frozen products, focusing on supermarket sales. The intention was to create striking packaging with strong colors that differentiated from others in the market, but without ignoring the color psychology applied in the food industry.',
-			},
-			{
 				id: 'coxinha',
 				title: '',
 				content: '',
 				image: getImagePath('images/dotrigo/cover _ Coxinha.jpg'),
+			},
+			{
+				id: 'text',
+				title: '',
+				content:
+					'Creation of packaging for frozen products, focusing on supermarket sales. The intention was to create striking packaging with strong colors that differentiated from others in the market, but without ignoring the color psychology applied in the food industry.',
 			},
 			{
 				id: 'churros',

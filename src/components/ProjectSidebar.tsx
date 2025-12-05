@@ -2,7 +2,7 @@ import { useNavigate } from 'react-router-dom';
 import type { Project } from '@/data/types';
 import { Button } from './ui/button';
 import { PROJECTS, getImagePath } from '@/data/projects';
-import { InstagramIcon, LinkedinIcon, Mail } from 'lucide-react';
+import { LinkedinIcon, Mail, Phone } from 'lucide-react';
 
 interface ProjectSidebarProps {
 	project: Project;
@@ -27,7 +27,9 @@ export default function ProjectSidebar({ project }: ProjectSidebarProps) {
 			{/* Main Logo */}
 			<div className="flex justify-center">
 				<img
-					src={getImagePath('images/Personal Branding/Mariah Holder - Personal Branding - Reverse.png')}
+					src={getImagePath(
+						'images/Personal Branding/Mariah Holder - Personal Branding - Reverse.png',
+					)}
 					alt="Mariah Holder Personal Branding"
 					className="h-32 cursor-pointer"
 					onClick={() => navigate('/')}
@@ -59,29 +61,27 @@ export default function ProjectSidebar({ project }: ProjectSidebarProps) {
 				</p>
 				<div className="flex flex-row gap-4">
 					<a
-						href="mailto:hello@example.com"
+						href="mailto:mariahohs@gmail.com"
 						className="text-gray-700 hover:text-black transition-colors"
 						aria-label="Email"
 					>
 						<Mail className="w-5 h-5" />
 					</a>
 					<a
-						href="https://linkedin.com"
+						href="tel:+1 (778) 723 1604"
+						className="text-gray-700 hover:text-black transition-colors"
+						aria-label="Phone"
+					>
+						<Phone className="w-5 h-5" />
+					</a>
+					<a
+						href="https://www.linkedin.com/in/mariahholder/"
 						target="_blank"
 						rel="noopener noreferrer"
 						className="text-gray-700 hover:text-black transition-colors"
 						aria-label="LinkedIn"
 					>
 						<LinkedinIcon className="w-5 h-5" />
-					</a>
-					<a
-						href="https://instagram.com"
-						target="_blank"
-						rel="noopener noreferrer"
-						className="text-gray-700 hover:text-black transition-colors"
-						aria-label="Instagram"
-					>
-						<InstagramIcon className="w-5 h-5" />
 					</a>
 				</div>
 			</div>

@@ -29,9 +29,6 @@ export default function ProjectCard({ project }: ProjectCardProps) {
 					<h3 className="text-xl font-semibold line-clamp-1">
 						{project.title}
 					</h3>
-					<span className="text-sm text-muted-foreground">
-						{project.year}
-					</span>
 				</div>
 
 				<p className="text-sm text-muted-foreground line-clamp-2">

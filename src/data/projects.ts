@@ -9,7 +9,7 @@ export const PROJECTS: Project[] = [
 	{
 		id: 'arpo-cafe',
 		title: 'Arpo Cafe - Logo Design',
-		year: 2024,
+		year: 2025,
 		thumbnail: getImagePath('images/arpo/cover_Arpo Cafe - FINAL.png'),
 		category: 'Branding',
 		description: 'Complete visual identity for a modern cafe',
@@ -24,7 +24,7 @@ export const PROJECTS: Project[] = [
 				id: 'text',
 				title: '',
 				content:
-					'Arpô Café is a Brazilian coffee shop inspired by the vibrant spirit and iconic landscapes of Rio de Janeiro. The brand name comes from "Pedra do Arpoador," a famous coastal landmark known for its breathtaking sunsets.\n\nFor the logo, I developed a visual identity that blends Brazilian energy with the cozy atmosphere of a neighborhood coffee shop. The color palette draws inspiration from Brazil\'s natural tones and sunny coastline, reinforcing the brand\'s roots and cultural essence.\n\nThe logo incorporates symbolic elements such as the sun, a coffee cup, a coffee bean, and the surrounding mountains. Together, these shapes represent both the richness of Brazilian coffee and the unique geography of Rio de Janeiro. The typography was carefully selected to convey a sense of movement, reflecting both the flow of coffee and the gentle rhythm of Rio\'s ocean waves. This detail brings harmony and motion to the visual identity, connecting the brand even more deeply to its cultural and geographic inspiration.\n\nThe result is a vibrant and meaningful mark that reflects the soul of Arpô Café: welcoming, authentic, and proudly Brazilian.',
+					"Arpô Café is a Brazilian coffee shop inspired by the vibrant spirit and iconic landscapes of Rio de Janeiro. The brand name comes from \"Pedra do Arpoador,\" a famous coastal landmark known for its breathtaking sunsets.\n\nFor the logo, I developed a visual identity that blends Brazilian energy with the cozy atmosphere of a neighborhood coffee shop. The color palette draws inspiration from Brazil's natural tones and sunny coastline, reinforcing the brand's roots and cultural essence.\n\nThe logo incorporates symbolic elements such as the sun, a coffee cup, a coffee bean, and the surrounding mountains. Together, these shapes represent both the richness of Brazilian coffee and the unique geography of Rio de Janeiro. The typography was carefully selected to convey a sense of movement, reflecting both the flow of coffee and the gentle rhythm of Rio's ocean waves. This detail brings harmony and motion to the visual identity, connecting the brand even more deeply to its cultural and geographic inspiration.\n\nThe result is a vibrant and meaningful mark that reflects the soul of Arpô Café: welcoming, authentic, and proudly Brazilian.",
 			},
 			{
 				id: 'elements',
@@ -44,7 +44,7 @@ export const PROJECTS: Project[] = [
 	{
 		id: 'elali',
 		title: 'Elali',
-		year: 2024,
+		year: 2023,
 		thumbnail: getImagePath('images/elali/cover _ Elali Logo.png'),
 		category: 'Branding',
 		description: 'Logo design and brand identity',
@@ -59,7 +59,7 @@ export const PROJECTS: Project[] = [
 				id: 'text',
 				title: '',
 				content:
-					'Elali Counselling sought a brand identity that expressed warmth, emotional support, and a subtle connection to motherhood. The client envisioned floral elements and a gentle colour palette capable of evoking comfort and empathy.\n\nTo bring this concept to life, I designed a visual identity centered around softness and emotional clarity. The logo features a minimalist jasmine flower enclosed in an oval frame, symbolizing nurturing, protection, and personal growth. The final result is a harmonious and soothing brand identity that aligns with Elali Counselling\'s values: professional, compassionate, and deeply human.',
+					"Elali Counselling sought a brand identity that expressed warmth, emotional support, and a subtle connection to motherhood. The client envisioned floral elements and a gentle colour palette capable of evoking comfort and empathy.\n\nTo bring this concept to life, I designed a visual identity centered around softness and emotional clarity. The logo features a minimalist jasmine flower enclosed in an oval frame, symbolizing nurturing, protection, and personal growth. The final result is a harmonious and soothing brand identity that aligns with Elali Counselling's values: professional, compassionate, and deeply human.",
 			},
 			{
 				id: 'logo',
@@ -79,8 +79,10 @@ export const PROJECTS: Project[] = [
 	{
 		id: 'multivista',
 		title: 'Multivista Social Media',
-		year: 2024,
-		thumbnail: getImagePath('images/multivista/cover _Multivista Social Media.png'),
+		year: 2021 - 2025,
+		thumbnail: getImagePath(
+			'images/multivista/cover _Multivista Social Media.png',
+		),
 		category: 'Social Media',
 		description: 'Social media content design',
 		sections: [
@@ -88,13 +90,15 @@ export const PROJECTS: Project[] = [
 				id: 'cover',
 				title: '',
 				content: '',
-				image: getImagePath('images/multivista/cover _Multivista Social Media.png'),
+				image: getImagePath(
+					'images/multivista/cover _Multivista Social Media.png',
+				),
 			},
 			{
 				id: 'text',
 				title: '',
 				content:
-					'Over four years, I worked at Multivista as a graphic designer, and one of my responsibilities was creating content for Instagram and other social media platforms. Take a look at some of the work I created for Multivista\'s Instagram over the years:',
+					"Over four years, I worked at Multivista as a graphic designer, and one of my responsibilities was creating content for Instagram and other social media platforms. Take a look at some of the work I created for Multivista's Instagram over the years:",
 			},
 			{
 				id: 'content',
@@ -149,7 +153,7 @@ export const PROJECTS: Project[] = [
 	{
 		id: 'gdp-delivery',
 		title: 'Gosto de pao Delivery - Package design',
-		year: 2023,
+		year: 2020,
 		thumbnail: getImagePath('images/gdp/GDP delivery logo.png'),
 		category: 'Package Design',
 		description: 'Brand identity for delivery service',
@@ -184,8 +188,10 @@ export const PROJECTS: Project[] = [
 	{
 		id: 'animal-collages',
 		title: 'Animal Collages',
-		year: 2023,
-		thumbnail: getImagePath('images/collages/covner_Animal collage - all.png'),
+		year: 2021,
+		thumbnail: getImagePath(
+			'images/collages/covner_Animal collage - all.png',
+		),
 		category: 'Illustration',
 		description: 'Creative animal portrait collages',
 		sections: [
@@ -193,19 +199,25 @@ export const PROJECTS: Project[] = [
 				id: 'cover',
 				title: '',
 				content: '',
-				image: getImagePath('images/collages/covner_Animal collage - all.png'),
+				image: getImagePath(
+					'images/collages/covner_Animal collage - all.png',
+				),
 			},
 			{
 				id: 'collection',
 				title: '',
 				content: '',
-				image: getImagePath('images/collages/Animal collage - panda.png'),
+				image: getImagePath(
+					'images/collages/Animal collage - panda.png',
+				),
 			},
 			{
 				id: 'variety',
 				title: '',
 				content: '',
-				image: getImagePath('images/collages/Animal collage - esquilo.png'),
+				image: getImagePath(
+					'images/collages/Animal collage - esquilo.png',
+				),
 			},
 		],
 		tools: ['Photoshop', 'Illustrator'],

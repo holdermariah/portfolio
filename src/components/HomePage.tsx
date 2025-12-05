@@ -13,7 +13,7 @@ export default function HomePage() {
 	return (
 		<div className="min-h-screen">
 			{/* Landing Section */}
-			<section className="h-screen flex flex-col items-center justify-center px-4 relative">
+			<section className="h-screen flex flex-col items-center justify-center relative">
 				<div className="text-center space-y-8 relative z-10">
 					<div className="space-y-4">
 						<img

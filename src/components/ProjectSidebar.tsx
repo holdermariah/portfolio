@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import type { Project } from '@/data/types';
 import { Button } from './ui/button';
-import { PROJECTS } from '@/data/projects';
+import { PROJECTS, getImagePath } from '@/data/projects';
 import { InstagramIcon, LinkedinIcon, Mail } from 'lucide-react';
 
 interface ProjectSidebarProps {
@@ -27,7 +27,7 @@ export default function ProjectSidebar({ project }: ProjectSidebarProps) {
 			{/* Main Logo */}
 			<div className="flex justify-center">
 				<img
-					src="/images/Personal Branding/Mariah Holder - Personal Branding - Reverse.png"
+					src={getImagePath('images/Personal Branding/Mariah Holder - Personal Branding - Reverse.png')}
 					alt="Mariah Holder Personal Branding"
 					className="h-32 cursor-pointer"
 					onClick={() => navigate('/')}

@@ -4,12 +4,12 @@ import path from "path";
 import { defineConfig } from "vite";
 
 // https://vite.dev/config/
-export default defineConfig(({ command }) => ({
+export default defineConfig(({ mode }) => ({
   plugins: [react(), tailwindcss()],
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
     },
   },
-  base: command === 'serve' ? '/' : '/portfolio/',
+  base: mode === 'production' ? '/portfolio/' : '/',
 }));

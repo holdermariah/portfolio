@@ -1,4 +1,4 @@
-import { PROJECTS } from '@/data/projects';
+import { PROJECTS, getImagePath } from '@/data/projects';
 import ProjectCard from './ProjectCard';
 import AnimatedArrow from './ui/animated-arrow';
 import { Button } from './ui/button';
@@ -17,7 +17,7 @@ export default function HomePage() {
 				<div className="text-center space-y-8 relative z-10">
 					<div className="space-y-4">
 						<img
-							src="/images/Personal Branding/Mariah Holder - Personal Branding - Reverse.png"
+							src={getImagePath('images/Personal Branding/Mariah Holder - Personal Branding - Reverse.png')}
 							alt="Mariah Holder Personal Branding"
 							className="h-[50vh]"
 						/>

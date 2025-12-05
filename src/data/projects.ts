@@ -1,6 +1,6 @@
 import type { Project } from './types';
 
-const getImagePath = (path: string) => {
+export const getImagePath = (path: string) => {
 	const base = import.meta.env.BASE_URL;
 	return `${base}${path}`.replace(/\/+/g, '/');
 };

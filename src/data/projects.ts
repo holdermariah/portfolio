@@ -196,12 +196,6 @@ export const PROJECTS: Project[] = [
 		description: 'Food photography and styling for Brazilian snacks',
 		sections: [
 			{
-				id: 'cover',
-				title: '',
-				content: '',
-				image: getImagePath('images/dotrigo/cover _ Coxinha.jpg'),
-			},
-			{
 				id: 'text',
 				title: '',
 				content:

@@ -15,13 +15,13 @@ export default function ProjectCard({ project }: ProjectCardProps) {
       className="group cursor-pointer overflow-hidden border-0 shadow-lg transition-all hover:shadow-2xl"
       onClick={() => navigate(`/project/${project.id}`)}
     >
-      <div className="relative aspect-[4/3] overflow-hidden">
+      <div className="relative aspect-4/3 overflow-hidden">
         <img
           src={project.thumbnail}
           alt={project.title}
           className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+        <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
       </div>
 
       <div className="p-6 space-y-3">

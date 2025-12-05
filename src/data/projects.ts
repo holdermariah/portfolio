@@ -45,12 +45,6 @@ export const PROJECTS: Project[] = [
 				image: getImagePath('images/arpo/Arpo cafe Business card.png'),
 			},
 			{
-				id: 'coffee-cup',
-				title: '',
-				content: '',
-				image: getImagePath('images/arpo/Coffee cup.png'),
-			},
-			{
 				id: 'package',
 				title: '',
 				content: '',
@@ -61,6 +55,12 @@ export const PROJECTS: Project[] = [
 				title: '',
 				content: '',
 				image: getImagePath('images/arpo/Pin Mockup.png'),
+			},
+			{
+				id: 'coffee-cup',
+				title: '',
+				content: '',
+				image: getImagePath('images/arpo/Coffee cup.png'),
 			},
 		],
 		tools: ['Figma', 'Illustrator', 'Photoshop'],

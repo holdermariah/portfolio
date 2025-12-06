@@ -48,7 +48,7 @@ export const PROJECTS: Project[] = [
 				id: 'package',
 				title: '',
 				content: '',
-				image: getImagePath('images/arpo/Packege Mockup.png'),
+				image: getImagePath('images/arpo/Package Mockup.png'),
 			},
 			{
 				id: 'pin',
@@ -83,7 +83,7 @@ export const PROJECTS: Project[] = [
 				id: 'text',
 				title: '',
 				content:
-					"Elali Counselling sought a brand identity that expressed warmth, emotional support, and a subtle connection to motherhood. The client envisioned floral elements and a gentle colour palette capable of evoking comfort and empathy.\n\nTo bring this concept to life, I designed a visual identity centered around softness and emotional clarity. The logo features a minimalist jasmine flower enclosed in an oval frame, symbolizing nurturing, protection, and personal growth. The final result is a harmonious and soothing brand identity that aligns with Elali Counselling's values: professional, compassionate, and deeply human.",
+					"Elali Counselling sought a brand identity that expressed warmth, emotional support, and a subtle connection to motherhood. The client envisioned floral elements and a gentle color palette capable of evoking comfort and empathy.\n\nTo bring this concept to life, I designed a visual identity centered around softness and emotional clarity. The logo features a minimalist jasmine flower enclosed in an oval frame, symbolizing nurturing, protection, and personal growth. The final result is a harmonious and soothing brand identity that aligns with Elali Counselling's values: professional, compassionate, and deeply human.",
 			},
 			{
 				id: 'logo',
@@ -188,6 +188,64 @@ export const PROJECTS: Project[] = [
 		tools: ['Photoshop', 'Illustrator'],
 	},
 	{
+		id: 'poti studio',
+		title: 'Poti Studio - Logo Design',
+		year: 2023,
+		thumbnail: getImagePath('images/poti/1- Potilogo-01.png'),
+		category: 'Branding',
+		description: 'Branding of Poti Studio',
+		sections: [
+			{
+				id: '1',
+				title: '',
+				content: '',
+				image: getImagePath('images/poti/1- Potilogo-01.png'),
+			},
+			{
+				id: 'text',
+				title: '',
+				content:
+					'The branding for Poti Studio was designed to express the studio’s core mission: creating powerful visual experiences through graphic design and photography. The logo places an illustrated eye inside the “o,” symbolizing observation, and creativity. \n\n Overall, the identity reflects Poti Studio’s commitment to thoughtful image-making and its ability to transform ideas into striking visual narratives.',
+			},
+			{
+				id: '2',
+				title: '',
+				content: '',
+				image: getImagePath(
+					'images/poti/2- Poti mockups papelaria - 2-02.png',
+				),
+			},
+			{
+				id: '3',
+				title: '',
+				content: '',
+				image: getImagePath('images/poti/3 - Poti - BC-01.png'),
+			},
+			{
+				id: '4',
+				title: '',
+				content: '',
+				image: getImagePath('images/poti/4 - beanie Poti.png'),
+			},
+			{
+				id: '5',
+				title: '',
+				content: '',
+				image: getImagePath(
+					'images/poti/5 - Poti mockups papelaria - 1-01.png',
+				),
+			},
+			{
+				id: '6',
+				title: '',
+				content: '',
+				image: getImagePath(
+					'images/poti/6 - sweatshirt mock up Poti.png',
+				),
+			},
+		],
+	},
+	{
 		id: 'dotrigo',
 		title: 'Dotrigo - Package Design',
 		year: 2023,
@@ -280,7 +338,7 @@ export const PROJECTS: Project[] = [
 		title: 'Animal Collages',
 		year: 2021,
 		thumbnail: getImagePath(
-			'images/collages/covner_Animal collage - all.png',
+			'images/collages/cover_Animal collage - all.png',
 		),
 		category: 'Collage',
 		description: 'Creative animal portrait collages',
@@ -290,7 +348,7 @@ export const PROJECTS: Project[] = [
 				title: '',
 				content: '',
 				image: getImagePath(
-					'images/collages/covner_Animal collage - all.png',
+					'images/collages/cover_Animal collage - all.png',
 				),
 			},
 			{

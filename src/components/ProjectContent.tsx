@@ -21,7 +21,7 @@ export default function ProjectContent({ project }: ProjectContentProps) {
 						className="scroll-mt-8 space-y-6 w-full"
 					>
 						{section.images && section.images.length > 0 && (
-							<div className="w-full gap-2 md:flex md:flex-row md:items-start md:justify-between overflow-hidden">
+							<div className="w-full gap-8 md:flex md:flex-row md:items-start md:justify-center overflow-hidden">
 								{section.images.map((image, index) => (
 									<div>
 										<img
@@ -34,7 +34,7 @@ export default function ProjectContent({ project }: ProjectContentProps) {
 											className={cn(
 												(section.images?.length ?? 0) >
 													1
-													? 'w-full md:flex-1 md:min-w-0 md:h-96 object-contain rounded'
+													? 'w-full md:flex-1 md:min-w-0 md:max-h-[420px] object-contain rounded'
 													: 'w-full h-auto object-contain rounded',
 											)}
 										/>

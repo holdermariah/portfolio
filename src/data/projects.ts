@@ -246,6 +246,13 @@ export const PROJECTS: Project[] = [
 					getImagePath(
 						'images/poti/5 - Poti mockups papelaria - 1-01.png',
 					),
+				],
+			},
+			{
+				id: '6',
+				title: '',
+				content: '',
+				images: [
 					getImagePath('images/poti/6 - sweatshirt mock up Poti.png'),
 				],
 			},

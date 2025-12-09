@@ -20,7 +20,7 @@ export default function ProjectContent({ project }: ProjectContentProps) {
 						className="scroll-mt-8 space-y-6 w-full"
 					>
 						{section.images && section.images.length > 0 && (
-							<div className="w-full gap-4 items-center md:flex md:flex-row">
+							<div className="w-full gap-2 items-start md:flex md:flex-row">
 								{section.images.map((image, index) => (
 									<img
 										key={index}
@@ -29,7 +29,7 @@ export default function ProjectContent({ project }: ProjectContentProps) {
 											index + 1
 										}`}
 										loading="lazy"
-										className="w-full md:flex-1 md:min-w-0 object-contain"
+										className="w-auto h-auto md:min-w-0 md:min-h-96 object-contain"
 									/>
 								))}
 							</div>

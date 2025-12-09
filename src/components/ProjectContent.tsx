@@ -1,4 +1,5 @@
 import type { Project } from '@/data/types';
+import { cn } from '@/lib/utils';
 
 interface ProjectContentProps {
 	project: Project;
@@ -22,19 +23,22 @@ export default function ProjectContent({ project }: ProjectContentProps) {
 						{section.images && section.images.length > 0 && (
 							<div className="w-full gap-2 md:flex md:flex-row md:items-start md:justify-between overflow-hidden">
 								{section.images.map((image, index) => (
-									<img
-										key={index}
-										src={image}
-										alt={`${section.title} - Image ${
-											index + 1
-										}`}
-										loading="lazy"
-										className={
-											(section.images?.length ?? 0) > 1
-												? 'w-full md:flex-1 md:min-w-0 md:h-96 object-contain'
-												: 'w-full h-auto object-contain'
-										}
-									/>
+									<div>
+										<img
+											key={index}
+											src={image}
+											alt={`${section.title} - Image ${
+												index + 1
+											}`}
+											loading="lazy"
+											className={cn(
+												(section.images?.length ?? 0) >
+													1
+													? 'w-full md:flex-1 md:min-w-0 md:h-96 object-contain rounded'
+													: 'w-full h-auto object-contain rounded',
+											)}
+										/>
+									</div>
 								))}
 							</div>
 						)}

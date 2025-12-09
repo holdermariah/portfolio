@@ -13,5 +13,5 @@ export interface ProjectSection {
   id: string
   title: string
   content: string
-  image?: string
+  images?: string[]
 }

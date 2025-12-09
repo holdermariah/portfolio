@@ -17,16 +17,21 @@ export default function ProjectContent({ project }: ProjectContentProps) {
 					<section
 						key={section.id}
 						id={section.id}
-						className="scroll-mt-8 space-y-6"
+						className="scroll-mt-8 space-y-6 w-full"
 					>
-						{section.image && (
-							<div className="rounded-lg overflow-hidden shadow-lg">
-								<img
-									src={section.image}
-									alt={section.title}
-									className="w-full h-auto"
-									loading="lazy"
-								/>
+						{section.images && section.images.length > 0 && (
+							<div className="w-full gap-4 items-center md:flex md:flex-row">
+								{section.images.map((image, index) => (
+									<img
+										key={index}
+										src={image}
+										alt={`${section.title} - Image ${
+											index + 1
+										}`}
+										loading="lazy"
+										className="w-full md:flex-1 md:min-w-0 object-contain"
+									/>
+								))}
 							</div>
 						)}
 

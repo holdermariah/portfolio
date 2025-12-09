@@ -18,7 +18,9 @@ export const PROJECTS: Project[] = [
 				id: 'cover',
 				title: '',
 				content: '',
-				image: getImagePath('images/arpo/cover_Arpo Cafe - FINAL.png'),
+				images: [
+					getImagePath('images/arpo/cover_Arpo Cafe - FINAL.png'),
+				],
 			},
 			{
 				id: 'text',
@@ -30,37 +32,42 @@ export const PROJECTS: Project[] = [
 				id: 'elements',
 				title: '',
 				content: '',
-				image: getImagePath('images/arpo/Arpo Cafe - elements.png'),
+				images: [getImagePath('images/arpo/Arpo Cafe - elements.png')],
 			},
 			{
 				id: 'lines',
 				title: '',
 				content: '',
-				image: getImagePath('images/arpo/Arpo Cafe - lines.png'),
+				images: [getImagePath('images/arpo/Arpo Cafe - lines.png')],
 			},
 			{
 				id: 'business-card',
 				title: '',
 				content: '',
-				image: getImagePath('images/arpo/Arpo cafe Business card.png'),
+				images: [
+					getImagePath('images/arpo/Arpo cafe Business card.png'),
+				],
 			},
 			{
 				id: 'package',
 				title: '',
 				content: '',
-				image: getImagePath('images/arpo/Package Mockup.png'),
+				images: [getImagePath('images/arpo/Package Mockup.png')],
 			},
 			{
 				id: 'pin',
 				title: '',
 				content: '',
-				image: getImagePath('images/arpo/Pin Mockup.png'),
+				images: [
+					getImagePath('images/arpo/Pin Mockup.png'),
+					getImagePath('images/arpo/Coffee cup.png'),
+				],
 			},
 			{
 				id: 'coffee-cup',
 				title: '',
 				content: '',
-				image: getImagePath('images/arpo/Coffee cup.png'),
+				images: [],
 			},
 		],
 		tools: ['Figma', 'Illustrator', 'Photoshop'],
@@ -77,7 +84,7 @@ export const PROJECTS: Project[] = [
 				id: 'cover',
 				title: '',
 				content: '',
-				image: getImagePath('images/elali/cover _ Elali Logo.png'),
+				images: [getImagePath('images/elali/cover _ Elali Logo.png')],
 			},
 			{
 				id: 'text',
@@ -89,19 +96,19 @@ export const PROJECTS: Project[] = [
 				id: 'logo',
 				title: '',
 				content: '',
-				image: getImagePath('images/elali/ELALI.png'),
+				images: [getImagePath('images/elali/ELALI.png')],
 			},
 			{
 				id: 'variations',
 				title: '',
 				content: '',
-				image: getImagePath('images/elali/ELALI_2.png'),
+				images: [getImagePath('images/elali/ELALI_2.png')],
 			},
 			{
 				id: 'variations-2',
 				title: '',
 				content: '',
-				image: getImagePath('images/elali/ELALI_3.png'),
+				images: [getImagePath('images/elali/ELALI_3.png')],
 			},
 		],
 		tools: ['Illustrator', 'Photoshop'],
@@ -120,9 +127,11 @@ export const PROJECTS: Project[] = [
 				id: 'cover',
 				title: '',
 				content: '',
-				image: getImagePath(
-					'images/multivista/cover _Multivista Social Media.png',
-				),
+				images: [
+					getImagePath(
+						'images/multivista/cover _Multivista Social Media.png',
+					),
+				],
 			},
 			{
 				id: 'text',
@@ -134,55 +143,55 @@ export const PROJECTS: Project[] = [
 				id: 'content-1',
 				title: '',
 				content: '',
-				image: getImagePath('images/multivista/IMG_7347.jpg'),
+				images: [getImagePath('images/multivista/IMG_7347.jpg')],
 			},
 			{
 				id: 'content-2',
 				title: '',
 				content: '',
-				image: getImagePath('images/multivista/IMG_7348.jpg'),
+				images: [getImagePath('images/multivista/IMG_7348.jpg')],
 			},
 			{
 				id: 'content-3',
 				title: '',
 				content: '',
-				image: getImagePath('images/multivista/IMG_7349.jpg'),
+				images: [getImagePath('images/multivista/IMG_7349.jpg')],
 			},
 			{
 				id: 'content-4',
 				title: '',
 				content: '',
-				image: getImagePath('images/multivista/IMG_7350.jpg'),
+				images: [getImagePath('images/multivista/IMG_7350.jpg')],
 			},
 			{
 				id: 'content-5',
 				title: '',
 				content: '',
-				image: getImagePath('images/multivista/IMG_7351.jpg'),
+				images: [getImagePath('images/multivista/IMG_7351.jpg')],
 			},
 			{
 				id: 'content-6',
 				title: '',
 				content: '',
-				image: getImagePath('images/multivista/IMG_7352.jpg'),
+				images: [getImagePath('images/multivista/IMG_7352.jpg')],
 			},
 			{
 				id: 'content-7',
 				title: '',
 				content: '',
-				image: getImagePath('images/multivista/IMG_7353.jpg'),
+				images: [getImagePath('images/multivista/IMG_7353.jpg')],
 			},
 			{
 				id: 'content-8',
 				title: '',
 				content: '',
-				image: getImagePath('images/multivista/IMG_7354.jpg'),
+				images: [getImagePath('images/multivista/IMG_7354.jpg')],
 			},
 			{
 				id: 'content-9',
 				title: '',
 				content: '',
-				image: getImagePath('images/multivista/IMG_7355.jpg'),
+				images: [getImagePath('images/multivista/IMG_7355.jpg')],
 			},
 		],
 		tools: ['Photoshop', 'Illustrator'],
@@ -199,7 +208,7 @@ export const PROJECTS: Project[] = [
 				id: '1',
 				title: '',
 				content: '',
-				image: getImagePath('images/poti/1- Potilogo-01.png'),
+				images: [getImagePath('images/poti/1- Potilogo-01.png')],
 			},
 			{
 				id: 'text',
@@ -211,37 +220,34 @@ export const PROJECTS: Project[] = [
 				id: '2',
 				title: '',
 				content: '',
-				image: getImagePath(
-					'images/poti/2- Poti mockups papelaria - 2-02.png',
-				),
+				images: [
+					getImagePath(
+						'images/poti/2- Poti mockups papelaria - 2-02.png',
+					),
+				],
 			},
 			{
 				id: '3',
 				title: '',
 				content: '',
-				image: getImagePath('images/poti/3 - Poti - BC-01.png'),
+				images: [getImagePath('images/poti/3 - Poti - BC-01.png')],
 			},
 			{
 				id: '4',
 				title: '',
 				content: '',
-				image: getImagePath('images/poti/4 - beanie Poti.png'),
+				images: [getImagePath('images/poti/4 - beanie Poti.png')],
 			},
 			{
 				id: '5',
 				title: '',
 				content: '',
-				image: getImagePath(
-					'images/poti/5 - Poti mockups papelaria - 1-01.png',
-				),
-			},
-			{
-				id: '6',
-				title: '',
-				content: '',
-				image: getImagePath(
-					'images/poti/6 - sweatshirt mock up Poti.png',
-				),
+				images: [
+					getImagePath(
+						'images/poti/5 - Poti mockups papelaria - 1-01.png',
+					),
+					getImagePath('images/poti/6 - sweatshirt mock up Poti.png'),
+				],
 			},
 		],
 	},
@@ -257,7 +263,7 @@ export const PROJECTS: Project[] = [
 				id: 'coxinha',
 				title: '',
 				content: '',
-				image: getImagePath('images/dotrigo/cover _ Coxinha.jpg'),
+				images: [getImagePath('images/dotrigo/cover _ Coxinha.jpg')],
 			},
 			{
 				id: 'text',
@@ -269,25 +275,25 @@ export const PROJECTS: Project[] = [
 				id: 'churros',
 				title: '',
 				content: '',
-				image: getImagePath('images/dotrigo/Churros.jpg'),
+				images: [getImagePath('images/dotrigo/Churros.jpg')],
 			},
 			{
 				id: 'bolinha-queijo',
 				title: '',
 				content: '',
-				image: getImagePath('images/dotrigo/Bolinha de queijo.jpg'),
+				images: [getImagePath('images/dotrigo/Bolinha de queijo.jpg')],
 			},
 			{
 				id: 'bolinho-carne',
 				title: '',
 				content: '',
-				image: getImagePath('images/dotrigo/Bolinho de carne.jpg'),
+				images: [getImagePath('images/dotrigo/Bolinho de carne.jpg')],
 			},
 			{
 				id: 'pastel',
 				title: '',
 				content: '',
-				image: getImagePath('images/dotrigo/Pastel.jpg'),
+				images: [getImagePath('images/dotrigo/Pastel.jpg')],
 			},
 		],
 		tools: ['Photography', 'Photoshop'],
@@ -304,7 +310,7 @@ export const PROJECTS: Project[] = [
 				id: 'cover',
 				title: '',
 				content: '',
-				image: getImagePath('images/gdp/GDP delivery logo.png'),
+				images: [getImagePath('images/gdp/GDP delivery logo.png')],
 			},
 			{
 				id: 'text',
@@ -316,19 +322,19 @@ export const PROJECTS: Project[] = [
 				id: 'identity',
 				title: '',
 				content: '',
-				image: getImagePath('images/gdp/GDP delivery .png'),
+				images: [getImagePath('images/gdp/GDP delivery .png')],
 			},
 			{
 				id: 'sticker',
 				title: '',
 				content: '',
-				image: getImagePath('images/gdp/GDP delivery adesivo.png'),
+				images: [getImagePath('images/gdp/GDP delivery adesivo.png')],
 			},
 			{
 				id: 'bag',
 				title: '',
 				content: '',
-				image: getImagePath('images/gdp/GDP delivery sacola.png'),
+				images: [getImagePath('images/gdp/GDP delivery sacola.png')],
 			},
 		],
 		tools: ['Illustrator', 'Photoshop'],
@@ -347,41 +353,45 @@ export const PROJECTS: Project[] = [
 				id: 'cover',
 				title: '',
 				content: '',
-				image: getImagePath(
-					'images/collages/cover_Animal collage - all.png',
-				),
+				images: [
+					getImagePath(
+						'images/collages/cover_Animal collage - all.png',
+					),
+				],
 			},
 			{
 				id: 'panda',
 				title: '',
 				content: '',
-				image: getImagePath(
-					'images/collages/Animal collage - panda.png',
-				),
+				images: [
+					getImagePath('images/collages/Animal collage - panda.png'),
+				],
 			},
 			{
 				id: 'esquilo',
 				title: '',
 				content: '',
-				image: getImagePath(
-					'images/collages/Animal collage - esquilo.png',
-				),
+				images: [
+					getImagePath(
+						'images/collages/Animal collage - esquilo.png',
+					),
+				],
 			},
 			{
 				id: 'racoon',
 				title: '',
 				content: '',
-				image: getImagePath(
-					'images/collages/Animal collage - racoon.png',
-				),
+				images: [
+					getImagePath('images/collages/Animal collage - racoon.png'),
+				],
 			},
 			{
 				id: 'other',
 				title: '',
 				content: '',
-				image: getImagePath(
-					'images/collages/Animal collage - other.png',
-				),
+				images: [
+					getImagePath('images/collages/Animal collage - other.png'),
+				],
 			},
 		],
 		tools: ['Photoshop', 'Illustrator'],

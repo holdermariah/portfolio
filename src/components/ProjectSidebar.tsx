@@ -45,8 +45,10 @@ export default function ProjectSidebar({ project }: ProjectSidebarProps) {
 					<button
 						key={p.id}
 						onClick={() => navigate(`/project/${p.id}`)}
-						className={`block w-full text-left text-sm px-3 rounded-md transition-colors hover:bg-gray-100 text-gray-700 ${
-							p.id === project.id ? 'font-bold text-black' : ''
+						className={`block w-full text-left text-sm px-3 rounded-md transition-colors hover:bg-gray-100  hover:text-[#798dc6] ${
+							p.id === project.id
+								? 'font-bold text-[#798dc6]'
+								: 'text-gray-500'
 						}`}
 					>
 						{p.title}

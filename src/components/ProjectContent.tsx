@@ -1,4 +1,5 @@
 import type { Project } from '@/data/types';
+import { cn } from '@/lib/utils';
 
 interface ProjectContentProps {
 	project: Project;
@@ -20,7 +21,7 @@ export default function ProjectContent({ project }: ProjectContentProps) {
 						className="scroll-mt-8 space-y-6 w-full"
 					>
 						{section.images && section.images.length > 0 && (
-							<div className="w-full gap-2 items-start md:flex md:flex-row">
+							<div className="w-full md:items-start md:flex md:flex-row md:items-middle justify-between">
 								{section.images.map((image, index) => (
 									<img
 										key={index}
@@ -29,7 +30,12 @@ export default function ProjectContent({ project }: ProjectContentProps) {
 											index + 1
 										}`}
 										loading="lazy"
-										className="w-auto h-auto md:min-w-0 md:min-h-96 object-contain"
+										className={cn(
+											'h-full object-contain shrink',
+											(section?.images?.length ?? 0) > 1
+												? 'max-h-[60vh]'
+												: '',
+										)}
 									/>
 								))}
 							</div>

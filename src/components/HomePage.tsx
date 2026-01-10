@@ -9,11 +9,12 @@ export default function HomePage() {
 	const imageRef = useRef<HTMLDivElement>(null);
 
 	// Eye position configuration
+	const yOffset = 44;
 	const showDebugBox = false; // Set to true to show red reference boxes
-	const leftEyeX = 'calc(50% - 23px)';
-	const leftEyeY = 'calc(35% - 15px)';
+	const leftEyeX = 'calc(50% - 32px)';
+	const leftEyeY = `calc(50% - ${yOffset}px)`;
 	const rightEyeX = 'calc(50% + 12px)';
-	const rightEyeY = 'calc(35% - 15px)';
+	const rightEyeY = `calc(50% - ${yOffset}px)`;
 	const eyeSize = 4; // w-1 h-1 = 4px in Tailwind
 	const rangeSize = 5; // 10px movement range box
 
@@ -120,8 +121,11 @@ export default function HomePage() {
 							onClick={scrollToGrid}
 							size="lg"
 							variant="outline"
+							className="p-4"
 						>
-							<div className="text-lg">Check out my work</div>
+							<div className="text-md font-montserrat font-bold">
+								Check out my work!
+							</div>
 						</Button>
 						<AnimatedArrow className="w-12 h-12 mt-8" />
 					</div>

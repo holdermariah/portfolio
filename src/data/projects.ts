@@ -8,7 +8,7 @@ export const getImagePath = (path: string) => {
 export const PROJECTS: Project[] = [
 	{
 		id: 'arpo-cafe',
-		title: 'Arpô Café - Logo Design',
+		title: 'Arpô Café — Logo Design',
 		year: 2025,
 		thumbnail: getImagePath('images/arpo/cover_Arpo Cafe - FINAL.png'),
 		category: 'Branding',
@@ -74,7 +74,7 @@ export const PROJECTS: Project[] = [
 	},
 	{
 		id: 'elali',
-		title: 'Elali Counselling - Logo Design',
+		title: 'Elali Counselling — Logo Design',
 		year: 2023,
 		thumbnail: getImagePath('images/elali/cover _ Elali Logo.png'),
 		category: 'Branding',
@@ -113,6 +113,10 @@ export const PROJECTS: Project[] = [
 		],
 		tools: ['Illustrator', 'Photoshop'],
 	},
+	// {
+	// 	id: 'multivista-protected',
+	// 	title: 'Multivista Projects',
+	// },
 	{
 		id: 'multivista',
 		title: 'Multivista Social Media',
@@ -174,7 +178,7 @@ export const PROJECTS: Project[] = [
 	},
 	{
 		id: 'poti studio',
-		title: 'Poti Studio - Logo Design',
+		title: 'Poti Studio — Logo Design',
 		year: 2023,
 		thumbnail: getImagePath('images/poti/1- Potilogo-01.png'),
 		category: 'Branding',
@@ -236,7 +240,7 @@ export const PROJECTS: Project[] = [
 	},
 	{
 		id: 'dotrigo',
-		title: 'Dotrigo - Package Design',
+		title: 'Dotrigo — Package Design',
 		year: 2023,
 		thumbnail: getImagePath('images/dotrigo/cover _ Coxinha.jpg'),
 		category: 'Package Design',
@@ -283,7 +287,7 @@ export const PROJECTS: Project[] = [
 	},
 	{
 		id: 'gdp-delivery',
-		title: 'Gosto de Pão Delivery - Package Design',
+		title: 'Gosto de Pão Delivery — Package Design',
 		year: 2020,
 		thumbnail: getImagePath('images/gdp/GDP delivery logo.png'),
 		category: 'Package Design',

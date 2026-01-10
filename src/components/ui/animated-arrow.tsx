@@ -16,7 +16,7 @@ export default function AnimatedArrow({ className }: AnimatedArrowProps) {
 			{/* Single continuous stroke with arrowhead */}
 			<path
 				d="M 12 10 Q 28 14 38 30 L 32 30 L 38 30 L 38 24"
-				stroke="currentColor"
+				stroke="white"
 				strokeWidth="2.5"
 				strokeLinecap="round"
 				strokeLinejoin="round"

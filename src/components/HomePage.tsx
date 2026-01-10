@@ -119,9 +119,9 @@ export default function HomePage() {
 						<Button
 							onClick={scrollToGrid}
 							size="lg"
-							variant="ghost"
+							variant="outline"
 						>
-							<div className=" text-lg">Check out my work</div>
+							<div className="text-lg">Check out my work</div>
 						</Button>
 						<AnimatedArrow className="w-12 h-12 mt-8" />
 					</div>

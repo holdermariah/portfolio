@@ -121,7 +121,7 @@ export default function HomePage() {
 							onClick={scrollToGrid}
 							size="lg"
 							variant="outline"
-							className="p-4"
+							className="p-4 text-white"
 						>
 							<div className="text-md font-montserrat font-bold">
 								Check out my work!

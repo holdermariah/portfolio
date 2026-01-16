@@ -2,7 +2,6 @@ import { PROJECTS, getImagePath } from '@/data/projects';
 import ProjectCard from './ProjectCard';
 import { Button } from './ui/button';
 import { useState, useEffect, useRef } from 'react';
-import AnimatedArrow from './ui/animated-arrow';
 
 export default function HomePage() {
 	const [eyePosition, setEyePosition] = useState({ x: 0, y: 0 });
@@ -116,7 +115,6 @@ export default function HomePage() {
 						/>
 					</div>
 					<div className="flex items-center justify-center">
-						<div className="w-12"></div>
 						<Button
 							onClick={scrollToGrid}
 							size="lg"
@@ -127,7 +125,6 @@ export default function HomePage() {
 								Check out my work!
 							</div>
 						</Button>
-						<AnimatedArrow className="w-12 h-12 mt-8" />
 					</div>
 				</div>
 			</section>

@@ -1,7 +1,6 @@
-import { PROJECTS, getImagePath } from '@/data/projects';
-import ProjectCard from './ProjectCard';
-import { Button } from './ui/button';
+import { getImagePath } from '@/data/projects';
 import { useState, useEffect, useRef } from 'react';
+import NavButton from './NavButton';
 
 export default function HomePage() {
 	const [eyePosition, setEyePosition] = useState({ x: 0, y: 0 });
@@ -43,12 +42,6 @@ export default function HomePage() {
 		window.addEventListener('mousemove', handleMouseMove);
 		return () => window.removeEventListener('mousemove', handleMouseMove);
 	}, [rangeSize]);
-
-	const scrollToGrid = () => {
-		document
-			.getElementById('portfolio-grid')
-			?.scrollIntoView({ behavior: 'smooth' });
-	};
 
 	return (
 		<div className="min-h-screen">
@@ -115,30 +108,7 @@ export default function HomePage() {
 						/>
 					</div>
 					<div className="flex items-center justify-center">
-						<Button
-							onClick={scrollToGrid}
-							size="lg"
-							variant="outline"
-							className="p-4 text-white"
-						>
-							<div className="text-md font-montserrat font-bold">
-								Check out my work!
-							</div>
-						</Button>
-					</div>
-				</div>
-			</section>
-
-			{/* Portfolio Grid Section */}
-			<section
-				id="portfolio-grid"
-				className="min-h-screen py-20 px-4 md:px-8 lg:px-16"
-			>
-				<div className="max-w-7xl mx-auto">
-					<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-						{PROJECTS.map((project) => (
-							<ProjectCard key={project.id} project={project} />
-						))}
+						<NavButton to="/work">Check out my work!</NavButton>
 					</div>
 				</div>
 			</section>

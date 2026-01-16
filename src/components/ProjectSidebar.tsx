@@ -17,7 +17,7 @@ export default function ProjectSidebar({ project }: ProjectSidebarProps) {
 			<div className="space-y-4">
 				<Button
 					variant="ghost"
-					onClick={() => navigate('/')}
+					onClick={() => navigate('/work')}
 					className="px-0 hover:bg-transparent text-gray-700 hover:text-black"
 				>
 					←

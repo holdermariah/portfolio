@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import HomePage from './components/HomePage'
+import PortfolioPage from './components/PortfolioPage'
 import ProjectDetailPage from './components/ProjectDetailPage'
 import './App.css'
 
@@ -11,6 +12,7 @@ function App() {
       <div className="min-h-screen bg-[#798dc6]">
         <Routes>
           <Route path="/" element={<HomePage />} />
+          <Route path="/work" element={<PortfolioPage />} />
           <Route path="/project/:id" element={<ProjectDetailPage />} />
         </Routes>
       </div>

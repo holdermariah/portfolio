@@ -1,3 +1,4 @@
+import { useMemo } from 'react';
 import { useNavigate } from 'react-router-dom';
 import type { Project } from '@/data/types';
 import { Button } from './ui/button';
@@ -10,6 +11,17 @@ interface ProjectSidebarProps {
 
 export default function ProjectSidebar({ project }: ProjectSidebarProps) {
 	const navigate = useNavigate();
+
+	const projectsByCategory = useMemo(() => {
+		const grouped: Record<string, Project[]> = {};
+		for (const p of PROJECTS) {
+			if (!grouped[p.category]) {
+				grouped[p.category] = [];
+			}
+			grouped[p.category].push(p);
+		}
+		return grouped;
+	}, []);
 
 	return (
 		<aside className="w-full lg:w-72 lg:sticky lg:top-0 lg:h-screen p-6 lg:p-8 space-y-8 border-b lg:border-b-0 bg-white overflow-y-auto">
@@ -37,22 +49,26 @@ export default function ProjectSidebar({ project }: ProjectSidebarProps) {
 			</div>
 
 			{/* Projects Navigation */}
-			<nav className="space-y-2">
-				<p className="text-xs font-semibold uppercase tracking-wider text-gray-500 mb-4">
-					Work
-				</p>
-				{PROJECTS.map((p) => (
-					<button
-						key={p.id}
-						onClick={() => navigate(`/project/${p.id}`)}
-						className={`block w-full text-left text-sm px-3 rounded-md transition-colors hover:bg-gray-100  hover:text-[#798dc6] ${
-							p.id === project.id
-								? 'font-bold text-[#798dc6]'
-								: 'text-gray-500'
-						}`}
-					>
-						{p.title}
-					</button>
+			<nav className="space-y-4">
+				{Object.entries(projectsByCategory).map(([category, projects]) => (
+					<div key={category} className="space-y-1">
+						<p className="text-xs font-semibold uppercase tracking-wider text-gray-500 mb-2">
+							{category}
+						</p>
+						{projects.map((p) => (
+							<button
+								key={p.id}
+								onClick={() => navigate(`/project/${p.id}`)}
+								className={`block w-full text-left text-sm px-3 rounded-md transition-colors hover:bg-gray-100 hover:text-[#798dc6] ${
+									p.id === project.id
+										? 'font-bold text-[#798dc6]'
+										: 'text-gray-500'
+								}`}
+							>
+								{p.title}
+							</button>
+						))}
+					</div>
 				))}
 			</nav>
 

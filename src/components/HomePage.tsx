@@ -1,6 +1,5 @@
 import { getImagePath } from '@/data/projects';
 import { useState, useEffect, useRef } from 'react';
-import NavButton from './NavButton';
 
 export default function HomePage() {
 	const [eyePosition, setEyePosition] = useState({ x: 0, y: 0 });
@@ -46,7 +45,10 @@ export default function HomePage() {
 	return (
 		<div className="min-h-screen">
 			{/* Landing Section */}
-			<section className="h-screen flex flex-col items-center justify-center relative">
+			<section
+				id="hero"
+				className="h-screen flex flex-col items-center justify-center relative"
+			>
 				<div className="text-center space-y-8 relative z-10">
 					<div className="space-y-6 relative" ref={imageRef}>
 						<img
@@ -106,9 +108,6 @@ export default function HomePage() {
 								transform: `translate(${eyePosition.x}px, ${eyePosition.y}px)`,
 							}}
 						/>
-					</div>
-					<div className="flex items-center justify-center">
-						<NavButton to="/work">Check out my work!</NavButton>
 					</div>
 				</div>
 			</section>

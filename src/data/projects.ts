@@ -178,23 +178,23 @@ export const PROJECTS: Project[] = [
 	},
 	{
 		id: 'poti-studio',
-		title: 'Poti Studio',
-		year: 2023,
-		thumbnail: getImagePath('images/poti/1- Potilogo-01.png'),
+		title: 'Paticideli',
+		year: 2025,
+		thumbnail: getImagePath('images/praticideli/1 - Praticideli LOGO.png'),
 		category: 'Logo Design',
-		description: 'Branding of Poti Studio',
+		description: 'Branding of Praticideli',
 		sections: [
 			{
 				id: '1',
 				title: '',
 				content: '',
-				images: [getImagePath('images/poti/1- Potilogo-01.png')],
+				images: [getImagePath('images/praticideli/1 - Praticideli LOGO.png')],
 			},
 			{
 				id: 'text',
-				title: '',
+				title: 'Praticideli — Brand Identity Redesign',
 				content:
-					'The branding for Poti Studio was designed to express the studio’s core mission: creating powerful visual experiences through graphic design and photography. The logo places an illustrated eye inside the “o,” symbolizing observation, and creativity. \n\n Overall, the identity reflects Poti Studio’s commitment to thoughtful image-making and its ability to transform ideas into striking visual narratives.',
+					'Praticideli began as an exciting expansion within the DoTrigo food group, created to introduce a new brand aimed at a younger, more dynamic audience. I was invited to redesign DoTrigo’s existing visual language and transform it into something fresh, while still preserving a sense of connection to the parent brand. The challenge was to evolve the identity into a logo that felt more energetic, playful, and attention-grabbing. Since the target audience ranged from 25 to 40 years old, the design needed to communicate accessibility and modernity without losing the warmth associated with food brands. Through bold geometric forms and friendly typography, the final logo captures a lively personality that feels contemporary and inviting. The result is a visual identity that stands out on shelves and packaging, positioning Praticideli as a vibrant new voice within the DoTrigo family: familiar in spirit, yet confidently its own.',
 			},
 			{
 				id: '2',
@@ -202,7 +202,7 @@ export const PROJECTS: Project[] = [
 				content: '',
 				images: [
 					getImagePath(
-						'images/poti/2- Poti mockups papelaria - 2-02.png',
+						'images/praticideli/2 - Praticideli logo changing.png',
 					),
 				],
 			},
@@ -210,13 +210,13 @@ export const PROJECTS: Project[] = [
 				id: '3',
 				title: '',
 				content: '',
-				images: [getImagePath('images/poti/3 - Poti - BC-01.png')],
+				images: [getImagePath('images/praticideli/3 - Paper Cup Mockup_1.png')],
 			},
 			{
 				id: '4',
 				title: '',
 				content: '',
-				images: [getImagePath('images/poti/4 - beanie Poti.png')],
+				images: [getImagePath('images/praticideli/4 - Praticideli box.png')],
 			},
 			{
 				id: '5',
@@ -224,7 +224,7 @@ export const PROJECTS: Project[] = [
 				content: '',
 				images: [
 					getImagePath(
-						'images/poti/5 - Poti mockups papelaria - 1-01.png',
+						'images/praticideli/5 - Store plaque.png',
 					),
 				],
 			},
@@ -233,9 +233,16 @@ export const PROJECTS: Project[] = [
 				title: '',
 				content: '',
 				images: [
-					getImagePath('images/poti/6 - sweatshirt mock up Poti.png'),
+					getImagePath('images/praticideli/6 - Paper bag mockup.png'),
 				],
-			},
+			},{
+				id: '7',
+				title: '',
+				content: '',
+				images: [
+					getImagePath('images/praticideli/7 - apron Mockup_.png'),
+				],
+			}
 		],
 	},
 	{

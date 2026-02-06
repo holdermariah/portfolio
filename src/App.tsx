@@ -2,6 +2,7 @@ import { useMemo } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import HomePage from './components/HomePage';
 import TopNav from './components/TopNav';
+import AboutMePage from './components/AboutMePage';
 import CategorySection from './components/CategorySection';
 import ContactSection from './components/ContactSection';
 import ProjectDetailPage from './components/ProjectDetailPage';
@@ -64,6 +65,7 @@ function App() {
 		<BrowserRouter basename={basename}>
 			<Routes>
 				<Route path="/" element={<MainPage />} />
+				<Route path="/about-me" element={<AboutMePage />} />
 				<Route path="/project/:id" element={<ProjectDetailPage />} />
 			</Routes>
 		</BrowserRouter>

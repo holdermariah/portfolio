@@ -2,6 +2,7 @@ import { useNavigate } from 'react-router-dom';
 import type { Project } from '@/data/types';
 import { Card } from './ui/card';
 import { Badge } from './ui/badge';
+import { Lock } from 'lucide-react';
 
 interface ProjectCardProps {
 	project: Project;
@@ -22,6 +23,13 @@ export default function ProjectCard({ project }: ProjectCardProps) {
 					className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
 				/>
 				<div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+
+				{/* Lock icon for password-protected projects */}
+				{project.id === 'multivista' && (
+					<div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm rounded-full p-2 shadow-lg">
+						<Lock className="w-5 h-5 text-gray-700" />
+					</div>
+				)}
 			</div>
 
 			<div className="p-6 space-y-3">

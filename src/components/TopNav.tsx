@@ -1,33 +1,27 @@
-import { useMemo, useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
+import { useNavigate, useLocation } from 'react-router-dom';
+import { getCategorySectionId } from '@/data/categories';
 import { PROJECTS } from '@/data/projects';
-import {
-	getCategoryDisplayName,
-	getCategorySectionId,
-} from '@/data/categories';
 
 export default function TopNav() {
+	const navigate = useNavigate();
+	const location = useLocation();
 	const [activeSection, setActiveSection] = useState<string>('');
 
-	// Get unique categories from projects (preserves order of first appearance)
-	const categories = useMemo(() => {
-		const seen = new Set<string>();
-		const result: string[] = [];
-		for (const project of PROJECTS) {
-			if (!seen.has(project.category)) {
-				seen.add(project.category);
-				result.push(project.category);
-			}
-		}
-		return result;
-	}, []);
+	// Get the first category for "My Work" link
+	const firstCategory = PROJECTS[0]?.category || '';
+	const myWorkSectionId = getCategorySectionId(firstCategory);
 
-	// Track active section with Intersection Observer
+	const isAboutMePage = location.pathname === '/about-me';
+
+	// Track active section with Intersection Observer (only on main page)
 	useEffect(() => {
-		const sectionIds = [
-			'hero',
-			...categories.map((c) => getCategorySectionId(c)),
-			'contact',
-		];
+		if (isAboutMePage) {
+			setActiveSection('about-me');
+			return;
+		}
+
+		const sectionIds = ['hero', myWorkSectionId, 'contact'];
 
 		const observer = new IntersectionObserver(
 			(entries) => {
@@ -54,48 +48,56 @@ export default function TopNav() {
 		}
 
 		return () => observer.disconnect();
-	}, [categories]);
+	}, [myWorkSectionId, isAboutMePage]);
 
-	const scrollToSection = (sectionId: string) => {
-		const element = document.getElementById(sectionId);
-		if (element) {
-			element.scrollIntoView({ behavior: 'smooth' });
+	const handleNavigation = (itemId: string) => {
+		if (itemId === 'about-me') {
+			// Navigate to About Me page
+			navigate('/about-me');
+		} else if (isAboutMePage) {
+			// If on About Me page, navigate back to home and scroll
+			navigate('/');
+			setTimeout(() => {
+				const element = document.getElementById(itemId);
+				if (element) {
+					element.scrollIntoView({ behavior: 'smooth' });
+				}
+			}, 100);
+		} else {
+			// On main page, just scroll
+			const element = document.getElementById(itemId);
+			if (element) {
+				element.scrollIntoView({ behavior: 'smooth' });
+			}
 		}
 	};
+
+	const navItems = [
+		{ id: myWorkSectionId, label: 'MY WORK' },
+		{ id: 'about-me', label: 'ABOUT ME' },
+		{ id: 'contact', label: 'CONTACT' },
+	];
 
 	return (
 		<nav className="fixed top-4 left-1/2 -translate-x-1/2 z-50">
 			<div className="flex items-center gap-1 px-2 py-2 rounded-full bg-white/20 backdrop-blur-sm border border-white/30">
-				{categories.map((category) => {
-					const sectionId = getCategorySectionId(category);
-					const isActive = activeSection === sectionId;
+				{navItems.map((item) => {
+					const isActive = activeSection === item.id;
 
 					return (
 						<button
-							key={category}
-							onClick={() => scrollToSection(sectionId)}
+							key={item.id}
+							onClick={() => handleNavigation(item.id)}
 							className={`px-4 py-2 text-sm font-medium transition-colors rounded-full ${
 								isActive
 									? 'text-white bg-white/20'
 									: 'text-white/80 hover:text-white hover:bg-white/10'
 							}`}
 						>
-							{getCategoryDisplayName(category)}
+							{item.label}
 						</button>
 					);
 				})}
-
-				{/* Contact button with distinct styling */}
-				<button
-					onClick={() => scrollToSection('contact')}
-					className={`px-4 py-2 text-sm font-medium transition-colors rounded-full ${
-						activeSection === 'contact'
-							? 'text-white bg-white/20 '
-							: 'text-white/80 hover:text-white hover:bg-white/10'
-					}`}
-				>
-					CONTACT
-				</button>
 			</div>
 		</nav>
 	);

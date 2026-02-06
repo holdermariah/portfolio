@@ -3,6 +3,7 @@ import { useEffect } from 'react'
 import { PROJECTS } from '@/data/projects'
 import ProjectSidebar from './ProjectSidebar'
 import ProjectContent from './ProjectContent'
+import PasswordProtectedProject from './PasswordProtectedProject'
 
 export default function ProjectDetailPage() {
   const { id } = useParams<{ id: string }>()
@@ -14,6 +15,16 @@ export default function ProjectDetailPage() {
 
   if (!project) {
     return <Navigate to="/" replace />
+  }
+
+  // Password protect the multivista project
+  if (project.id === 'multivista') {
+    return (
+      <PasswordProtectedProject
+        project={project}
+        correctPassword="multivista"
+      />
+    )
   }
 
   return (

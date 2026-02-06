@@ -119,7 +119,7 @@ export const PROJECTS: Project[] = [
 	// },
 	{
 		id: 'multivista',
-		title: 'Multivista Social Media',
+		title: 'Multivista Projects',
 		year: 2021 - 2025,
 		thumbnail: getImagePath(
 			'images/multivista/cover _Multivista Social Media.png',

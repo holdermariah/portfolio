@@ -17,7 +17,12 @@ export default function ProjectSidebar({ project }: ProjectSidebarProps) {
 			<div className="space-y-4">
 				<Button
 					variant="ghost"
-					onClick={() => navigate('/work')}
+					onClick={() => {
+						navigate('/');
+						setTimeout(() => {
+							document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' });
+						}, 100);
+					}}
 					className="px-0 hover:bg-transparent text-gray-700 hover:text-black"
 				>
 					←

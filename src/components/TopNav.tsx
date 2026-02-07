@@ -1,16 +1,10 @@
 import { useState, useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
-import { getCategorySectionId } from '@/data/categories';
-import { PROJECTS } from '@/data/projects';
 
 export default function TopNav() {
 	const navigate = useNavigate();
 	const location = useLocation();
 	const [activeSection, setActiveSection] = useState<string>('');
-
-	// Get the first category for "My Work" link
-	const firstCategory = PROJECTS[0]?.category || '';
-	const myWorkSectionId = getCategorySectionId(firstCategory);
 
 	const isAboutMePage = location.pathname === '/about-me';
 
@@ -21,7 +15,7 @@ export default function TopNav() {
 			return;
 		}
 
-		const sectionIds = ['hero', myWorkSectionId, 'contact'];
+		const sectionIds = ['hero', 'projects', 'contact'];
 
 		const observer = new IntersectionObserver(
 			(entries) => {
@@ -48,7 +42,7 @@ export default function TopNav() {
 		}
 
 		return () => observer.disconnect();
-	}, [myWorkSectionId, isAboutMePage]);
+	}, [isAboutMePage]);
 
 	const handleNavigation = (itemId: string) => {
 		if (itemId === 'about-me') {
@@ -73,7 +67,7 @@ export default function TopNav() {
 	};
 
 	const navItems = [
-		{ id: myWorkSectionId, label: 'MY WORK' },
+		{ id: 'projects', label: 'MY WORK' },
 		{ id: 'about-me', label: 'ABOUT ME' },
 		{ id: 'contact', label: 'CONTACT' },
 	];

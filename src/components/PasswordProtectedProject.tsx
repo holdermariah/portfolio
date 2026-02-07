@@ -1,8 +1,11 @@
 import { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Button } from './ui/button';
 import type { Project } from '@/data/types';
 import ProjectSidebar from './ProjectSidebar';
 import ProjectContent from './ProjectContent';
+import { PROJECTS } from '@/data/projects';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 interface PasswordProtectedProjectProps {
 	project: Project;
@@ -13,9 +16,17 @@ export default function PasswordProtectedProject({
 	project,
 	correctPassword,
 }: PasswordProtectedProjectProps) {
+	const navigate = useNavigate();
 	const [password, setPassword] = useState('');
 	const [isAuthenticated, setIsAuthenticated] = useState(false);
 	const [error, setError] = useState(false);
+
+	// Get current project index and find previous/next projects
+	const currentIndex = PROJECTS.findIndex((p) => p.id === project.id);
+	const previousProject =
+		currentIndex > 0 ? PROJECTS[currentIndex - 1] : null;
+	const nextProject =
+		currentIndex < PROJECTS.length - 1 ? PROJECTS[currentIndex + 1] : null;
 
 	// Check if already authenticated in session
 	useEffect(() => {
@@ -40,9 +51,30 @@ export default function PasswordProtectedProject({
 
 	if (isAuthenticated) {
 		return (
-			<div className="min-h-screen flex flex-col lg:flex-row bg-white">
+			<div className="min-h-screen flex flex-col lg:flex-row bg-white relative">
 				<ProjectSidebar project={project} />
 				<ProjectContent project={project} />
+
+				{/* Navigation Arrows */}
+				{previousProject && (
+					<button
+						onClick={() => navigate(`/project/${previousProject.id}`)}
+						className="fixed bottom-8 left-8 bg-[#798dc6] hover:bg-[#6a7db5] text-white p-3 rounded-full shadow-lg transition-all hover:scale-110 z-50"
+						aria-label="Previous project"
+					>
+						<ChevronLeft className="w-6 h-6" />
+					</button>
+				)}
+
+				{nextProject && (
+					<button
+						onClick={() => navigate(`/project/${nextProject.id}`)}
+						className="fixed bottom-8 right-8 bg-[#798dc6] hover:bg-[#6a7db5] text-white p-3 rounded-full shadow-lg transition-all hover:scale-110 z-50"
+						aria-label="Next project"
+					>
+						<ChevronRight className="w-6 h-6" />
+					</button>
+				)}
 			</div>
 		);
 	}

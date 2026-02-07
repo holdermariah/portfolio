@@ -7,6 +7,65 @@ export const getImagePath = (path: string) => {
 
 export const PROJECTS: Project[] = [
 	{
+		id: 'multivista',
+		title: 'Multivista Projects',
+		year: 2021 - 2025,
+		thumbnail: getImagePath(
+			'images/multivista/cover _Multivista Social Media.png',
+		),
+		category: 'Multivista',
+		description: 'Social media content design',
+		sections: [
+			{
+				id: 'cover',
+				title: '',
+				content: '',
+				images: [
+					getImagePath(
+						'images/multivista/cover _Multivista Social Media.png',
+					),
+				],
+			},
+			{
+				id: 'text',
+				title: '',
+				content:
+					"Over four years, I worked at Multivista as a graphic designer, and one of my responsibilities was creating content for Instagram and other social media platforms. Take a look at some of the work I created for Multivista's Instagram over the years:",
+			},
+			{
+				id: 'content-1',
+				title: '',
+				content: '',
+				images: [
+					getImagePath('images/multivista/IMG_7347.jpg'),
+					getImagePath('images/multivista/IMG_7348.jpg'),
+					getImagePath('images/multivista/IMG_7349.jpg'),
+				],
+			},
+			{
+				id: 'content-4',
+				title: '',
+				content: '',
+				images: [
+					getImagePath('images/multivista/IMG_7350.jpg'),
+					getImagePath('images/multivista/IMG_7351.jpg'),
+					getImagePath('images/multivista/IMG_7352.jpg'),
+				],
+			},
+			{
+				id: 'content-7',
+				title: '',
+				content: '',
+				images: [
+					getImagePath('images/multivista/IMG_7353.jpg'),
+					getImagePath('images/multivista/IMG_7354.jpg'),
+					getImagePath('images/multivista/IMG_7355.jpg'),
+				],
+			},
+		],
+		tools: ['Photoshop', 'Illustrator'],
+	}, // Multivista
+	{
 		id: 'arpo-cafe',
 		title: 'Arpô Café',
 		year: 2025,
@@ -71,111 +130,7 @@ export const PROJECTS: Project[] = [
 			},
 		],
 		tools: ['Figma', 'Illustrator', 'Photoshop'],
-	},
-	{
-		id: 'elali',
-		title: 'Elali Counselling',
-		year: 2023,
-		thumbnail: getImagePath('images/elali/cover _ Elali Logo.png'),
-		category: 'Logo Design',
-		description: 'Logo design and brand identity',
-		sections: [
-			{
-				id: 'cover',
-				title: '',
-				content: '',
-				images: [getImagePath('images/elali/cover _ Elali Logo.png')],
-			},
-			{
-				id: 'text',
-				title: '',
-				content:
-					"Elali Counselling sought a brand identity that expressed warmth, emotional support, and a subtle connection to motherhood. The client envisioned floral elements and a gentle color palette capable of evoking comfort and empathy.\n\nTo bring this concept to life, I designed a visual identity centered around softness and emotional clarity. The logo features a minimalist jasmine flower enclosed in an oval frame, symbolizing nurturing, protection, and personal growth. The final result is a harmonious and soothing brand identity that aligns with Elali Counselling's values: professional, compassionate, and deeply human.",
-			},
-			{
-				id: 'logo',
-				title: '',
-				content: '',
-				images: [getImagePath('images/elali/ELALI2.png')],
-			},
-			{
-				id: 'variations',
-				title: '',
-				content: '',
-				images: [getImagePath('images/elali/ELALI.png')],
-			},
-			{
-				id: 'variations-2',
-				title: '',
-				content: '',
-				images: [getImagePath('images/elali/ELALI3.png')],
-			},
-		],
-		tools: ['Illustrator', 'Photoshop'],
-	},
-	// {
-	// 	id: 'multivista-protected',
-	// 	title: 'Multivista Projects',
-	// },
-	{
-		id: 'multivista',
-		title: 'Multivista Projects',
-		year: 2021 - 2025,
-		thumbnail: getImagePath(
-			'images/multivista/cover _Multivista Social Media.png',
-		),
-		category: 'Multivista',
-		description: 'Social media content design',
-		sections: [
-			{
-				id: 'cover',
-				title: '',
-				content: '',
-				images: [
-					getImagePath(
-						'images/multivista/cover _Multivista Social Media.png',
-					),
-				],
-			},
-			{
-				id: 'text',
-				title: '',
-				content:
-					"Over four years, I worked at Multivista as a graphic designer, and one of my responsibilities was creating content for Instagram and other social media platforms. Take a look at some of the work I created for Multivista's Instagram over the years:",
-			},
-			{
-				id: 'content-1',
-				title: '',
-				content: '',
-				images: [
-					getImagePath('images/multivista/IMG_7347.jpg'),
-					getImagePath('images/multivista/IMG_7348.jpg'),
-					getImagePath('images/multivista/IMG_7349.jpg'),
-				],
-			},
-			{
-				id: 'content-4',
-				title: '',
-				content: '',
-				images: [
-					getImagePath('images/multivista/IMG_7350.jpg'),
-					getImagePath('images/multivista/IMG_7351.jpg'),
-					getImagePath('images/multivista/IMG_7352.jpg'),
-				],
-			},
-			{
-				id: 'content-7',
-				title: '',
-				content: '',
-				images: [
-					getImagePath('images/multivista/IMG_7353.jpg'),
-					getImagePath('images/multivista/IMG_7354.jpg'),
-					getImagePath('images/multivista/IMG_7355.jpg'),
-				],
-			},
-		],
-		tools: ['Photoshop', 'Illustrator'],
-	},
+	}, // Arpo
 	{
 		id: 'poti-studio',
 		title: 'Paticideli',
@@ -244,7 +199,48 @@ export const PROJECTS: Project[] = [
 				],
 			}
 		],
-	},
+	}, // Praticideli
+	{
+		id: 'elali',
+		title: 'Elali Counselling',
+		year: 2023,
+		thumbnail: getImagePath('images/elali/cover _ Elali Logo.png'),
+		category: 'Logo Design',
+		description: 'Logo design and brand identity',
+		sections: [
+			{
+				id: 'cover',
+				title: '',
+				content: '',
+				images: [getImagePath('images/elali/cover _ Elali Logo.png')],
+			},
+			{
+				id: 'text',
+				title: '',
+				content:
+					"Elali Counselling sought a brand identity that expressed warmth, emotional support, and a subtle connection to motherhood. The client envisioned floral elements and a gentle color palette capable of evoking comfort and empathy.\n\nTo bring this concept to life, I designed a visual identity centered around softness and emotional clarity. The logo features a minimalist jasmine flower enclosed in an oval frame, symbolizing nurturing, protection, and personal growth. The final result is a harmonious and soothing brand identity that aligns with Elali Counselling's values: professional, compassionate, and deeply human.",
+			},
+			{
+				id: 'logo',
+				title: '',
+				content: '',
+				images: [getImagePath('images/elali/ELALI2.png')],
+			},
+			{
+				id: 'variations',
+				title: '',
+				content: '',
+				images: [getImagePath('images/elali/ELALI.png')],
+			},
+			{
+				id: 'variations-2',
+				title: '',
+				content: '',
+				images: [getImagePath('images/elali/ELALI3.png')],
+			},
+		],
+		tools: ['Illustrator', 'Photoshop'],
+	}, // Elali
 	{
 		id: 'dotrigo',
 		title: 'Dotrigo',
@@ -291,7 +287,7 @@ export const PROJECTS: Project[] = [
 			},
 		],
 		tools: ['Photography', 'Photoshop'],
-	},
+	}, // Dotrigo
 	{
 		id: 'gdp-delivery',
 		title: 'Gosto de Pão Delivery',
@@ -332,7 +328,7 @@ export const PROJECTS: Project[] = [
 			},
 		],
 		tools: ['Illustrator', 'Photoshop'],
-	},
+	}, // Gdp Delivery
 	{
 		id: 'animal-collages',
 		title: 'Animal Collages',
@@ -389,5 +385,5 @@ export const PROJECTS: Project[] = [
 			},
 		],
 		tools: ['Photoshop', 'Illustrator'],
-	},
+	}, // Collages
 ];

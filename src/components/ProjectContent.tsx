@@ -21,20 +21,32 @@ export default function ProjectContent({ project }: ProjectContentProps) {
 						className="scroll-mt-8 space-y-6 w-full"
 					>
 						{section.images && section.images.length > 0 && (
-							<div className="w-full gap-8 md:flex md:flex-row md:items-start md:justify-center overflow-hidden">
+							<div
+								className={cn(
+									'w-full overflow-hidden',
+									(section.images?.length ?? 0) >= 3
+										? 'grid grid-cols-3 gap-4'
+										: 'flex flex-row gap-16 items-start justify-center',
+								)}
+							>
 								{section.images.map((image, index) => (
-									<div>
+									<div
+										key={index}
+										className={cn(
+											(section.images?.length ?? 0) >= 3
+												? 'aspect-square overflow-hidden rounded'
+												: 'flex-1 min-w-0',
+										)}
+									>
 										<img
-											key={index}
 											src={image}
 											alt={`${section.title} - Image ${
 												index + 1
 											}`}
 											loading="lazy"
 											className={cn(
-												(section.images?.length ?? 0) >
-													1
-													? 'w-full md:flex-1 md:min-w-0 md:max-h-[420px] object-contain rounded'
+												(section.images?.length ?? 0) >= 3
+													? 'w-full h-full object-cover'
 													: 'w-full h-auto object-contain rounded',
 											)}
 										/>

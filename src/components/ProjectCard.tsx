@@ -17,7 +17,7 @@ export default function ProjectCard({ project, linkPrefix }: ProjectCardProps) {
 
 	return (
 		<Card
-			className="group cursor-pointer overflow-hidden border-0 shadow-lg transition-all hover:shadow-2xl"
+			className="group cursor-pointer overflow-hidden border-0 shadow-lg transition-all hover:shadow-2xl py-0"
 			onClick={() => navigate(targetPath)}
 		>
 			<div className="relative aspect-4/3 overflow-hidden">

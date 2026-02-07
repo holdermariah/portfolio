@@ -6,15 +6,19 @@ import { Lock } from 'lucide-react';
 
 interface ProjectCardProps {
 	project: Project;
+	linkPrefix?: string;
 }
 
-export default function ProjectCard({ project }: ProjectCardProps) {
+export default function ProjectCard({ project, linkPrefix }: ProjectCardProps) {
 	const navigate = useNavigate();
+	const targetPath = linkPrefix
+		? `${linkPrefix}/${project.id}`
+		: `/project/${project.id}`;
 
 	return (
 		<Card
 			className="group cursor-pointer overflow-hidden border-0 shadow-lg transition-all hover:shadow-2xl"
-			onClick={() => navigate(`/project/${project.id}`)}
+			onClick={() => navigate(targetPath)}
 		>
 			<div className="relative aspect-4/3 overflow-hidden">
 				<img
@@ -25,7 +29,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
 				<div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
 				{/* Lock icon for password-protected projects */}
-				{project.id === 'multivista' && (
+				{!linkPrefix && project.id === 'multivista' && (
 					<div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm rounded-full p-2 shadow-lg">
 						<Lock className="w-5 h-5 text-gray-700" />
 					</div>

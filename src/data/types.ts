@@ -7,6 +7,7 @@ export interface Project {
   description: string
   sections: ProjectSection[]
   tools?: string[]
+  subProjects?: Project[]
 }
 
 export interface ProjectSection {

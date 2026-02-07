@@ -5,6 +5,7 @@ import AboutMePage from './components/AboutMePage';
 import ProjectCard from './components/ProjectCard';
 import ContactSection from './components/ContactSection';
 import ProjectDetailPage from './components/ProjectDetailPage';
+import SubProjectDetailPage from './components/SubProjectDetailPage';
 import { PROJECTS } from './data/projects';
 import './App.css';
 
@@ -42,6 +43,7 @@ function App() {
 				<Route path="/" element={<MainPage />} />
 				<Route path="/about-me" element={<AboutMePage />} />
 				<Route path="/project/:id" element={<ProjectDetailPage />} />
+				<Route path="/project/:id/:subId" element={<SubProjectDetailPage />} />
 			</Routes>
 		</BrowserRouter>
 	);

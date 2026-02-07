@@ -32,38 +32,91 @@ export const PROJECTS: Project[] = [
 				content:
 					"Over four years, I worked at Multivista as a graphic designer, and one of my responsibilities was creating content for Instagram and other social media platforms. Take a look at some of the work I created for Multivista's Instagram over the years:",
 			},
-			{
-				id: 'content-1',
-				title: '',
-				content: '',
-				images: [
-					getImagePath('images/multivista/IMG_7347.jpg'),
-					getImagePath('images/multivista/IMG_7348.jpg'),
-					getImagePath('images/multivista/IMG_7349.jpg'),
-				],
-			},
-			{
-				id: 'content-4',
-				title: '',
-				content: '',
-				images: [
-					getImagePath('images/multivista/IMG_7350.jpg'),
-					getImagePath('images/multivista/IMG_7351.jpg'),
-					getImagePath('images/multivista/IMG_7352.jpg'),
-				],
-			},
-			{
-				id: 'content-7',
-				title: '',
-				content: '',
-				images: [
-					getImagePath('images/multivista/IMG_7353.jpg'),
-					getImagePath('images/multivista/IMG_7354.jpg'),
-					getImagePath('images/multivista/IMG_7355.jpg'),
-				],
-			},
 		],
 		tools: ['Photoshop', 'Illustrator'],
+		subProjects: [
+			{
+				id: 'social-media-1',
+				title: 'Social Media Set 1',
+				year: 2021,
+				thumbnail: getImagePath('images/multivista/IMG_7347.jpg'),
+				category: 'Social Media',
+				description: 'Instagram content design for Multivista',
+				sections: [
+					{
+						id: 'cover',
+						title: '',
+						content: '',
+						images: [getImagePath('images/multivista/IMG_7347.jpg')],
+					},
+					{
+						id: 'content',
+						title: '',
+						content: '',
+						images: [
+							getImagePath('images/multivista/IMG_7347.jpg'),
+							getImagePath('images/multivista/IMG_7348.jpg'),
+							getImagePath('images/multivista/IMG_7349.jpg'),
+						],
+					},
+				],
+				tools: ['Photoshop', 'Illustrator'],
+			},
+			{
+				id: 'social-media-2',
+				title: 'Social Media Set 2',
+				year: 2023,
+				thumbnail: getImagePath('images/multivista/IMG_7350.jpg'),
+				category: 'Social Media',
+				description: 'Instagram content design for Multivista',
+				sections: [
+					{
+						id: 'cover',
+						title: '',
+						content: '',
+						images: [getImagePath('images/multivista/IMG_7350.jpg')],
+					},
+					{
+						id: 'content',
+						title: '',
+						content: '',
+						images: [
+							getImagePath('images/multivista/IMG_7350.jpg'),
+							getImagePath('images/multivista/IMG_7351.jpg'),
+							getImagePath('images/multivista/IMG_7352.jpg'),
+						],
+					},
+				],
+				tools: ['Photoshop', 'Illustrator'],
+			},
+			{
+				id: 'social-media-3',
+				title: 'Social Media Set 3',
+				year: 2025,
+				thumbnail: getImagePath('images/multivista/IMG_7353.jpg'),
+				category: 'Social Media',
+				description: 'Instagram content design for Multivista',
+				sections: [
+					{
+						id: 'cover',
+						title: '',
+						content: '',
+						images: [getImagePath('images/multivista/IMG_7353.jpg')],
+					},
+					{
+						id: 'content',
+						title: '',
+						content: '',
+						images: [
+							getImagePath('images/multivista/IMG_7353.jpg'),
+							getImagePath('images/multivista/IMG_7354.jpg'),
+							getImagePath('images/multivista/IMG_7355.jpg'),
+						],
+					},
+				],
+				tools: ['Photoshop', 'Illustrator'],
+			},
+		],
 	}, // Multivista
 	{
 		id: 'arpo-cafe',

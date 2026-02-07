@@ -6,9 +6,10 @@ import { LinkedinIcon, Mail, Phone } from 'lucide-react';
 
 interface ProjectSidebarProps {
 	project: Project;
+	parentProjectId?: string;
 }
 
-export default function ProjectSidebar({ project }: ProjectSidebarProps) {
+export default function ProjectSidebar({ project, parentProjectId }: ProjectSidebarProps) {
 	const navigate = useNavigate();
 
 	return (
@@ -43,19 +44,50 @@ export default function ProjectSidebar({ project }: ProjectSidebarProps) {
 
 			{/* Projects Navigation */}
 			<nav className="space-y-1">
-				{PROJECTS.map((p) => (
-					<button
-						key={p.id}
-						onClick={() => navigate(`/project/${p.id}`)}
-						className={`block w-full text-left text-sm px-3 rounded-md transition-colors hover:bg-gray-100 hover:text-[#798dc6] ${
-							p.id === project.id
-								? 'font-bold text-[#798dc6]'
-								: 'text-gray-500'
-						}`}
-					>
-						{p.title}
-					</button>
-				))}
+				{PROJECTS.map((p) => {
+					const isActiveParent = parentProjectId
+						? p.id === parentProjectId
+						: p.id === project.id;
+					const isAuthenticated =
+						p.subProjects &&
+						sessionStorage.getItem(`project_auth_${p.id}`) === 'true';
+
+					return (
+						<div key={p.id}>
+							<button
+								onClick={() => navigate(`/project/${p.id}`)}
+								className={`block w-full text-left text-sm px-3 rounded-md transition-colors hover:bg-gray-100 hover:text-[#798dc6] ${
+									isActiveParent
+										? 'font-bold text-[#798dc6]'
+										: 'text-gray-500'
+								}`}
+							>
+								{p.title}
+							</button>
+
+							{/* Nested sub-projects (indented, only when authenticated) */}
+							{isAuthenticated && (
+								<div className="ml-4 space-y-1 mt-1">
+									{p.subProjects!.map((sub) => (
+										<button
+											key={sub.id}
+											onClick={() =>
+												navigate(`/project/${p.id}/${sub.id}`)
+											}
+											className={`block w-full text-left text-xs px-3 rounded-md transition-colors hover:bg-gray-100 hover:text-[#798dc6] ${
+												sub.id === project.id
+													? 'font-bold text-[#798dc6]'
+													: 'text-gray-400'
+											}`}
+										>
+											{sub.title}
+										</button>
+									))}
+								</div>
+							)}
+						</div>
+					);
+				})}
 			</nav>
 
 			{/* Contact Section */}

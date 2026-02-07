@@ -4,17 +4,20 @@ import { Button } from './ui/button';
 import type { Project } from '@/data/types';
 import ProjectSidebar from './ProjectSidebar';
 import ProjectContent from './ProjectContent';
+import ProjectCard from './ProjectCard';
 import { PROJECTS } from '@/data/projects';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 interface PasswordProtectedProjectProps {
 	project: Project;
 	correctPassword: string;
+	onAuthenticated?: () => void;
 }
 
 export default function PasswordProtectedProject({
 	project,
 	correctPassword,
+	onAuthenticated,
 }: PasswordProtectedProjectProps) {
 	const navigate = useNavigate();
 	const [password, setPassword] = useState('');
@@ -41,7 +44,11 @@ export default function PasswordProtectedProject({
 		if (password === correctPassword) {
 			const authKey = `project_auth_${project.id}`;
 			sessionStorage.setItem(authKey, 'true');
-			setIsAuthenticated(true);
+			if (onAuthenticated) {
+				onAuthenticated();
+			} else {
+				setIsAuthenticated(true);
+			}
 			setError(false);
 		} else {
 			setError(true);
@@ -50,6 +57,56 @@ export default function PasswordProtectedProject({
 	};
 
 	if (isAuthenticated) {
+		const textSection = project.sections.find((s) => s.id === 'text');
+
+		if (project.subProjects && project.subProjects.length > 0) {
+			return (
+				<div className="min-h-screen flex flex-col lg:flex-row bg-white relative">
+					<ProjectSidebar project={project} />
+					<main className="flex-1 p-10 lg:pl-24 lg:pr-24">
+						<h2 className="text-3xl font-bold w-full text-center pb-8 text-black">
+							{project.title}
+						</h2>
+						{textSection?.content && (
+							<p className="text-base leading-relaxed text-black max-w-3xl mx-auto mb-12 text-center">
+								{textSection.content}
+							</p>
+						)}
+						<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+							{project.subProjects.map((sub) => (
+								<ProjectCard
+									key={sub.id}
+									project={sub}
+									linkPrefix={`/project/${project.id}`}
+								/>
+							))}
+						</div>
+					</main>
+
+					{/* Navigation Arrows */}
+					{previousProject && (
+						<button
+							onClick={() => navigate(`/project/${previousProject.id}`)}
+							className="fixed bottom-8 left-8 bg-[#798dc6] hover:bg-[#6a7db5] text-white p-3 rounded-full shadow-lg transition-all hover:scale-110 z-50"
+							aria-label="Previous project"
+						>
+							<ChevronLeft className="w-6 h-6" />
+						</button>
+					)}
+
+					{nextProject && (
+						<button
+							onClick={() => navigate(`/project/${nextProject.id}`)}
+							className="fixed bottom-8 right-8 bg-[#798dc6] hover:bg-[#6a7db5] text-white p-3 rounded-full shadow-lg transition-all hover:scale-110 z-50"
+							aria-label="Next project"
+						>
+							<ChevronRight className="w-6 h-6" />
+						</button>
+					)}
+				</div>
+			);
+		}
+
 		return (
 			<div className="min-h-screen flex flex-col lg:flex-row bg-white relative">
 				<ProjectSidebar project={project} />

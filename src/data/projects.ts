@@ -198,7 +198,7 @@ export const PROJECTS: Project[] = [
 	}, // Arpo
 	{
 		id: 'Praticideli',
-		title: 'Paticideli',
+		title: 'Praticideli',
 		year: 2025,
 		thumbnail: getImagePath('images/praticideli/1 - Praticideli LOGO.png'),
 		category: 'Logo Design',
@@ -230,13 +230,13 @@ export const PROJECTS: Project[] = [
 				id: '3',
 				title: '',
 				content: '',
-				images: [getImagePath('images/praticideli/3 - Paper Cup Mockup_1.png')],
+				images: [getImagePath('images/praticideli/4 - Praticideli box.png')],
 			},
 			{
 				id: '4',
 				title: '',
 				content: '',
-				images: [getImagePath('images/praticideli/4 - Praticideli box.png')],
+				images: [getImagePath('images/praticideli/3 - Paper Cup Mockup_1.png')],
 			},
 			{
 				id: '5',

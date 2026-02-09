@@ -222,7 +222,7 @@ export const PROJECTS: Project[] = [
 				content: '',
 				images: [
 					getImagePath(
-						'images/praticideli/2 - Praticideli logo changing.png',
+						'images/praticideli/Praticideli logo changing.png',
 					),
 				],
 			},

@@ -29,7 +29,7 @@ export default function ProjectDetailPage() {
     return (
       <PasswordProtectedProject
         project={project}
-        correctPassword="multivista"
+        correctPassword="mywork"
       />
     )
   }

@@ -30,7 +30,7 @@ export default function SubProjectDetailPage() {
 		return (
 			<PasswordProtectedProject
 				project={parentProject}
-				correctPassword="multivista"
+				correctPassword="mywork"
 				onAuthenticated={() => setIsAuthenticated(true)}
 			/>
 		);

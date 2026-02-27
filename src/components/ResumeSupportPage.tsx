@@ -30,15 +30,14 @@ function ResumeSupportPage() {
 				{/* Summary */}
 				<div className="mb-6">
 					<p className="leading-relaxed text-sm text-justify">
-						Empathetic and technical Graphic Designer with 5+ years
-						of experience transitioning into Customer Support.
-						Proven track record of simplifying complex concepts,
-						troubleshooting visual/technical workflows, and
-						collaborating with cross-functional teams to deliver
-						high-quality solutions. Passionate about empowering the
-						creative community and leveraging modern tools—including
-						AI-assisted workflows—to provide exceptional,
-						personalized support.
+						Technical Support and Design Specialist with 5+ years of
+						experience delivering solutions for creative
+						professionals. Adept at clarifying technical details and
+						resolving operational challenges while working across
+						teams. Drawing on a professional photography background
+						to navigate technical requirements, utilizing emerging
+						technologies and modern tools to deliver precise,
+						tailored assistance.
 					</p>
 				</div>
 
@@ -64,14 +63,14 @@ function ResumeSupportPage() {
 						<ul className="list-disc list-outside ml-4 text-xs space-y-1.5">
 							<li>
 								<strong>Support & Troubleshooting:</strong>{' '}
-								Managed and resolved internal support tickets
-								from franchisees, providing technical guidance
-								on brand assets and production workflows.
+								Fielded and resolved technical inquiries from
+								franchisees, providing guidance on brand assets
+								and digital production workflows.
 							</li>
 							<li>
-								Developed scalable design templates and toolkits
-								to streamline cross-team production and improve
-								self-service efficiency.
+								Created standardized templates and guides to
+								support autonomous problem-solving and improve
+								production efficiency.
 							</li>
 							<li>
 								Utilized{' '}
@@ -103,9 +102,9 @@ function ResumeSupportPage() {
 								guidance on clinic services.
 							</li>
 							<li>
-								Methodically troubleshot scheduling conflicts
-								and billing issues, ensuring a stress-free
-								experience for patients.
+								Resolved scheduling and billing discrepancies
+								with a methodical approach, ensuring a smooth
+								experience for clients.
 							</li>
 							<li>
 								Utilized clinic management software to maintain
@@ -131,8 +130,8 @@ function ResumeSupportPage() {
 							<li>
 								<strong>Customer Engagement:</strong> Managed
 								digital presence across Instagram and Google
-								Maps, providing timely and empathetic responses
-								to customer inquiries.
+								Maps, providing timely and professional
+								responses to customer inquiries.
 							</li>
 							<li>
 								Built internal templates and visual guidelines
@@ -169,8 +168,7 @@ function ResumeSupportPage() {
 							</li>
 							<li>
 								Managed scheduling and technical questions with
-								a structured, empathetic approach to
-								problem-solving.
+								a methodical approach to problem-solving.
 							</li>
 							<li>
 								Acted as official department photographer,
@@ -261,9 +259,10 @@ function ResumeSupportPage() {
 					<div className="grid grid-cols-2 gap-4 text-xs">
 						<ul className="list-disc list-outside ml-4 space-y-1">
 							<li>
-								<strong>Support:</strong> Empathetic
-								Communication, Structured Troubleshooting,
-								Customer Success, Technical Guidance.
+								<strong>Support:</strong> User-Centric
+								Communication, Diagnostic Problem Solving,
+								Technical Issue Documentation, Technical
+								Guidance.
 							</li>
 							<li>
 								<strong>Creative:</strong> Professional

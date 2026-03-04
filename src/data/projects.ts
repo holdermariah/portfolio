@@ -128,6 +128,37 @@ export const PROJECTS: Project[] = [
 				],
 				tools: ['Photoshop', 'Illustrator'],
 			},
+			{
+				id: 'Brochures Examples',
+				title: 'Brochure Examples',
+				year: 2025,
+				thumbnail: getImagePath('images/multivista/Brochure.png'),
+				category: 'Print Design',
+				description: 'Marketing brochure designs created for Multivista',
+				sections: [
+					{
+						id: 'cover',
+						title: '',
+						content: '',
+					},
+					{
+						id: 'content',
+						title: 'Brochure Examples',
+						content: '',
+						downloads: [
+							{
+								thumbnail: getImagePath('images/multivista/General Marketing Brochure_NEW HEXAGON LOGO_2025.pdf'),
+								url: getImagePath('images/multivista/General Marketing Brochure_NEW HEXAGON LOGO_2025.pdf'),
+							},
+							{
+								thumbnail: getImagePath('images/multivista/General Marketing Brochure Expanded_NEW HEXAGON LOGO_2025.pdf'),
+								url: getImagePath('images/multivista/General Marketing Brochure Expanded_NEW HEXAGON LOGO_2025.pdf'),
+							},
+						],
+					},
+				],
+				tools: ['Photoshop', 'Illustrator'],
+			},
 		],
 	}, // Multivista
 	{

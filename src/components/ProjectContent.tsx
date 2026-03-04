@@ -55,6 +55,33 @@ export default function ProjectContent({ project }: ProjectContentProps) {
 							</div>
 						)}
 
+						{section.downloads && section.downloads.length > 0 && (
+							<div className="flex flex-row gap-16 items-start justify-center w-full">
+								{section.downloads.map((download, index) => (
+									<a
+										key={index}
+										href={download.url}
+										download
+										className="flex-1 min-w-0 group/download cursor-pointer"
+									>
+										<div className="relative overflow-hidden rounded shadow-md transition-shadow group-hover/download:shadow-xl">
+											<img
+												src={download.thumbnail}
+												alt={`Download PDF ${index + 1}`}
+												loading="lazy"
+												className="w-full h-auto object-contain transition-transform duration-300 group-hover/download:scale-105"
+											/>
+											<div className="absolute inset-0 bg-black/0 group-hover/download:bg-black/10 transition-colors duration-300 flex items-center justify-center">
+												<span className="opacity-0 group-hover/download:opacity-100 transition-opacity duration-300 bg-white/90 text-black text-sm font-medium px-4 py-2 rounded-full shadow">
+													Download PDF
+												</span>
+											</div>
+										</div>
+									</a>
+								))}
+							</div>
+						)}
+
 						{section.content && (
 							<div className="prose prose-neutral max-w-none">
 								{section.content

@@ -15,4 +15,5 @@ export interface ProjectSection {
   title: string
   content: string
   images?: string[]
+  downloads?: { thumbnail: string; url: string }[]
 }

@@ -29,8 +29,7 @@ export const PROJECTS: Project[] = [
 			{
 				id: 'text',
 				title: '',
-				content:
-					"Over four years, I worked at Multivista as a graphic designer, and one of my responsibilities was creating content for Instagram and other social media platforms. Take a look at some of the work I created for Multivista's Instagram over the years:",
+				content: '',
 			},
 		],
 		tools: ['Photoshop', 'Illustrator'],
